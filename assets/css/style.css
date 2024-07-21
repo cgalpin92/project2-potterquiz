@@ -18,6 +18,18 @@ footer {
     color: whitesmoke;
 }
 
+h1 {
+    font-family: 'Philosopher', sans-serif;
+}
+
+h2 {
+    font-family: 'Julius Sans One', sans-serif;
+}
+
+h3 {
+    font-family: 'Cormorant Garamond', sans-serif;
+}
+
 /* header styling */
 
 
