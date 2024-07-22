@@ -253,6 +253,8 @@ function displayHarryQuestion(){
     btnTwo.textContent = "home";
     quizArea.appendChild(btnOne);
     quizArea.appendChild(btnTwo);
+
+    
 };
 
 function nextQuestionOne(){
@@ -261,8 +263,11 @@ function nextQuestionOne(){
         displayHarryQuestion();
     } else {
         alert('Quiz complete');
+        currentQuestion = 0;
     }
 };
+
+
 
 function runHarryGame(){
     hideMainContent();
@@ -277,8 +282,10 @@ function displayRonQuestion(){
     let choicesElement = document.getElementById("answer-choices");
 
     //fetches the current question from harryQuestion variable and places it in a variable
+    console.log('ronQuestions: ', ronQuestions);
+    console.log('currentQuestion: ', currentQuestion);
     let displayQuestion = ronQuestions[currentQuestion];
-    
+    console.log('displayQuestion', displayQuestion);
     questionElement.textContent = displayQuestion.question;
 
     //create choices    
@@ -310,6 +317,7 @@ function nextQuestionTwo(){
         displayRonQuestion();
     } else {
         alert('Quiz complete');
+        currentQuestion = 0;
     }
 };
 
@@ -360,6 +368,7 @@ function nextQuestionThree(){
         displayHermioneQuestion();
     } else {
         alert('Quiz complete');
+        currentQuestion = 0;
     }
 };
 
