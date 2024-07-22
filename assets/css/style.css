@@ -79,6 +79,17 @@ img {
     justify-content: center;
 }
 
+label {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+input.radio-button {
+    margin-top: 10%;
+}
+
+#answer-choices {}
+
 /* footer styling */
 
 

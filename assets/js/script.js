@@ -235,6 +235,7 @@ function displayHarryQuestion(){
         input.type = "radio";
         input.name = "answer";
         input.value = "index";
+        input.setAttribute('class', 'radio-button');
         choicesElement.appendChild(input);
         
         let label = document.createElement('label');
@@ -283,6 +284,7 @@ function displayRonQuestion(){
         input.type = "radio";
         input.name = "answer";
         input.value = "index";
+        input.setAttribute('class', 'radio-button');
         choicesElement.appendChild(input);
         
         let label = document.createElement('label');
@@ -332,6 +334,7 @@ function displayHermioneQuestion(){
         input.type = "radio";
         input.name = "answer";
         input.value = "index";
+        input.setAttribute('class', 'radio-button');
         choicesElement.appendChild(input);
         
         let label = document.createElement('label');
