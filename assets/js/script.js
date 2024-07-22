@@ -314,16 +314,52 @@ function runRonGame(){
 };
 
 
+function displayHermioneQuestion(){
+
+    //places the question and choices in the correct locations within quiz area and assigns them a variable
+    let questionElement = document.getElementById("question");
+    let choicesElement = document.getElementById("answer-choices");
+
+    //fetches the current question from harryQuestion variable and places it in a variable
+    let displayQuestion = hermioneQuestions[currentQuestion];
+    
+    questionElement.textContent = displayQuestion.question;
+
+    //create choices    
+    choicesElement.innerHTML = "";
+    displayQuestion.choices.forEach((choice, index) => {
+        let input = document.createElement('input');
+        input.type = "radio";
+        input.name = "answer";
+        input.value = "index";
+        choicesElement.appendChild(input);
+        
+        let label = document.createElement('label');
+        label.textContent = choice;
+        choicesElement.appendChild(label);
+    });
+    
+    btnOne.setAttribute('onclick', 'nextQuestionThree();');
+    btnOne.textContent = "Next";
+    btnTwo.setAttribute('onclick', 'home();');
+    btnTwo.textContent = "home";
+    quizArea.appendChild(btnOne);
+    quizArea.appendChild(btnTwo);
+};
+
 function nextQuestionThree(){
     currentQuestion++
-    if(currentQuestion < harryQuestions.length) {
-        displayHarryQuestion();
+    if(currentQuestion < hermioneQuestions.length) {
+        displayHermioneQuestion();
     } else {
         alert('Quiz complete');
     }
 };
-function runHermioneGame(){
 
+function runHermioneGame(){
+    hideMainContent();
+    displayQuizArea();
+    displayHermioneQuestion();
 };
 
 function home(){
