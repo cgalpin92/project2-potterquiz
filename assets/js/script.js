@@ -179,11 +179,15 @@ let currentQuestion = 0;
 
 //functions
 
-
-function removeButtons(){
-
+function createUsername(selected){
+    document.querySelector('form').addEventListener('submit', (e) => {
+        e.preventDefault();
+        let userName = document.getElementById('username').value;
+        document.getElementById('username-field').textContent = `Hello, ${userName}`;
+    })
+    let userNameInput = document.getElementById('username-input');
+    userNameInput.style.display = "none";
 };
-
 
 
 function hideMainContent(){

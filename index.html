@@ -21,12 +21,13 @@
         <!--section 1 create username-->
         <section>
             <div>
-                <form action="">
-                    <div>
-                        <label for=""></label>
-                        <input type="text">
+                <form>
+                    <div id=username-input>
+                        <label for="username">Create a Username:</label>
+                        <input type="text" name="username" id="username">
+                        <input type="submit" value="create" onclick="createUsername()">
                     </div>
-                    <input type="text">
+                    <h2 id="username-field"></h2>
                 </form>
             </div>
         </section>
