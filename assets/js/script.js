@@ -1,3 +1,5 @@
+//Global Variables
+
 let harryQuestions = [
     {
         question: "What house does Harry belong to?",
@@ -175,10 +177,7 @@ let btnTwo = document.createElement('BUTTON');
 let currentQuestion = 0;
 
 
-function removeContent(){
-
-};
-
+//functions
 
 
 function removeButtons(){
@@ -199,13 +198,18 @@ function hideMainContent(){
 
 
 function displayMainContent(){
-
+    let harry = document.getElementById('harry');
+    let ron = document.getElementById('ron');
+    let hermione = document.getElementById('hermione');
+    harry.style.display = "block";
+    ron.style.display = "block";
+    hermione.style.display = "block";
 };
 
 
 
 function hideQuizArea(){
-
+    quizArea.style.display = 'none';
 };
 
 function displayQuizArea(){
@@ -224,8 +228,7 @@ function displayHarryQuestion(){
     
     questionElement.textContent = displayQuestion.question;
 
-    //create choices in buttons
-    
+    //create choices    
     choicesElement.innerHTML = "";
     displayQuestion.choices.forEach((choice, index) => {
         let input = document.createElement('input');
@@ -255,25 +258,41 @@ function nextQuestionOne(){
         alert('Quiz complete');
     }
 };
+
 function runHarryGame(){
-    //removeContent();
     hideMainContent();
     displayQuizArea();
     displayHarryQuestion();    
 };
 
 
+function nextQuestionTwo(){
+    currentQuestion++
+    if(currentQuestion < harryQuestions.length) {
+        displayHarryQuestion();
+    } else {
+        alert('Quiz complete');
+    }
+};
 
 function runRonGame(){
 
 };
 
 
-
+function nextQuestionThree(){
+    currentQuestion++
+    if(currentQuestion < harryQuestions.length) {
+        displayHarryQuestion();
+    } else {
+        alert('Quiz complete');
+    }
+};
 function runHermioneGame(){
 
 };
 
 function home(){
-    
+    displayMainContent();
+    hideQuizArea();
 };
