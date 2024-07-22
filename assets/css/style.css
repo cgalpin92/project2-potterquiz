@@ -39,7 +39,7 @@ h1 {
 h2 {
     font-family: 'Julius Sans One', sans-serif;
     font-size: 200%;
-    padding: 3%;
+    padding: 10%;
 
 
 }
@@ -55,6 +55,12 @@ p {
     font-weight: 500;
     padding: 3%;
 
+}
+
+button {
+    display: flex;
+    float: right;
+    margin: 3%;
 }
 
 
