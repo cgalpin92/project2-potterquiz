@@ -2,10 +2,16 @@
 
 * {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 /* general styling */
 
+body {
+    font-family: 'Cormorant Garamond', sans-serif;
+    text-align: center;
+}
 
 header {
     background-color: black;
@@ -27,15 +33,31 @@ footer {
 
 h1 {
     font-family: 'Philosopher', sans-serif;
+    font-size: 350%;
 }
 
 h2 {
     font-family: 'Julius Sans One', sans-serif;
+    font-size: 200%;
+    padding: 3%;
+
+
 }
 
 h3 {
-    font-family: 'Cormorant Garamond', sans-serif;
+    font-size: 150%;
+    padding: 3%;
+
 }
+
+p {
+    font-size: 130%;
+    font-weight: 500;
+    padding: 3%;
+
+}
+
+
 
 /* header styling */
 
