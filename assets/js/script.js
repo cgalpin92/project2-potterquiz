@@ -265,18 +265,52 @@ function runHarryGame(){
     displayHarryQuestion();    
 };
 
+function displayRonQuestion(){
+
+    //places the question and choices in the correct locations within quiz area and assigns them a variable
+    let questionElement = document.getElementById("question");
+    let choicesElement = document.getElementById("answer-choices");
+
+    //fetches the current question from harryQuestion variable and places it in a variable
+    let displayQuestion = ronQuestions[currentQuestion];
+    
+    questionElement.textContent = displayQuestion.question;
+
+    //create choices    
+    choicesElement.innerHTML = "";
+    displayQuestion.choices.forEach((choice, index) => {
+        let input = document.createElement('input');
+        input.type = "radio";
+        input.name = "answer";
+        input.value = "index";
+        choicesElement.appendChild(input);
+        
+        let label = document.createElement('label');
+        label.textContent = choice;
+        choicesElement.appendChild(label);
+    });
+    
+    btnOne.setAttribute('onclick', 'nextQuestionTwo();');
+    btnOne.textContent = "Next";
+    btnTwo.setAttribute('onclick', 'home();');
+    btnTwo.textContent = "home";
+    quizArea.appendChild(btnOne);
+    quizArea.appendChild(btnTwo);
+};
 
 function nextQuestionTwo(){
     currentQuestion++
-    if(currentQuestion < harryQuestions.length) {
-        displayHarryQuestion();
+    if(currentQuestion < ronQuestions.length) {
+        displayRonQuestion();
     } else {
         alert('Quiz complete');
     }
 };
 
 function runRonGame(){
-
+    hideMainContent();
+    displayQuizArea();
+    displayRonQuestion();
 };
 
 
