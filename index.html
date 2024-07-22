@@ -19,50 +19,54 @@
     <main>
 
         <!--section 1 create username-->
-        <div>
-            <form action="">
-                <div>
-                    <label for=""></label>
+        <section>
+            <div>
+                <form action="">
+                    <div>
+                        <label for=""></label>
+                        <input type="text">
+                    </div>
                     <input type="text">
-                </div>
-                <input type="text">
-            </form>
-        </div>
+                </form>
+            </div>
+        </section>
 
         <!--section 2 Game Area-->
-        <div id="game-area">
+        <section id="game-area">
             <!--section 2.1 Home Page content-->
-            <div id="harry">
-                <h2>Harry Potter</h2>
-                <p>Test your knowledge on Harry Potter</p>
-                <div class="main-image">
-                    <img src="assets/images/harry potter.jpg"
-                        alt="picture of Harry Potter film character looking at the screen. Harry is dressed in his Hogwarts school uniform and wearing round glasses">
+            <div id="main-content">
+                <div id="harry">
+                    <h2>Harry Potter</h2>
+                    <p>Test your knowledge on Harry Potter</p>
+                    <div class="main-image">
+                        <img src="assets/images/harry potter.jpg"
+                            alt="picture of Harry Potter film character looking at the screen. Harry is dressed in his Hogwarts school uniform and wearing round glasses">
+                    </div>
+                    <div class="start-btn">
+                        <button onclick="harryGame()">Begin Quiz</button>
+                    </div>
                 </div>
-                <div class="start-btn">
-                    <button onclick="harryGame()">Begin Quiz</button>
+                <div id="ron">
+                    <h2>Ron Weasley</h2>
+                    <p>Test your knowledge on Ron Weasley</p>
+                    <div class="main-image">
+                        <img src="assets/images/Ron Weasley.jpg"
+                            alt="picture of Ron Weasley film character pointing a wand at the screen. Ron is dressed in his Hogwarts school uniform">
+                    </div>
+                    <div class="start-btn">
+                        <button onclick="ronGame()">Begin Quiz</button>
+                    </div>
                 </div>
-            </div>
-            <div id="ron">
-                <h2>Ron Weasley</h2>
-                <p>Test your knowledge on Ron Weasley</p>
-                <div class="main-image">
-                    <img src="assets/images/Ron Weasley.jpg"
-                        alt="picture of Ron Weasley film character pointing a wand at the screen. Ron is dressed in his Hogwarts school uniform">
-                </div>
-                <div class="start-btn">
-                    <button onclick="ronGame()">Begin Quiz</button>
-                </div>
-            </div>
-            <div>
-                <h2 id="hermione">Hermione Granger</h2>
-                <p>Test your knowledge on Hermione Granger</p>
-                <div class="main-image">
-                    <img src="assets/images/hermione granger.jpg"
-                        alt="picure of Hermione Granger film character standing side on and looking at the screen. Hermione is dressed in her Hogwarts school uniform">
-                </div>
-                <div class="start-btn">
-                    <button onclick="hermioneGame()">Begin Quiz</button>
+                <div>
+                    <h2 id="hermione">Hermione Granger</h2>
+                    <p>Test your knowledge on Hermione Granger</p>
+                    <div class="main-image">
+                        <img src="assets/images/hermione granger.jpg"
+                            alt="picure of Hermione Granger film character standing side on and looking at the screen. Hermione is dressed in her Hogwarts school uniform">
+                    </div>
+                    <div class="start-btn">
+                        <button onclick="hermioneGame()">Begin Quiz</button>
+                    </div>
                 </div>
             </div>
 
@@ -71,8 +75,7 @@
                 <h3 id="question"></h3>
                 <div id="answer-choices"></div>
             </div>
-        </div>
-
+        </section>
     </main>
 
     <!--footer-->
