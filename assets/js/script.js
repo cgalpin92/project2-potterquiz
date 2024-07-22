@@ -188,7 +188,12 @@ function removeButtons(){
 
 
 function hideMainContent(){
-
+    let harry = document.getElementById('harry');
+    let ron = document.getElementById('ron');
+    let hermione = document.getElementById('hermione');
+    harry.style.display = "none";
+    ron.style.display = "none";
+    hermione.style.display = "none";
 };
 
 
@@ -204,49 +209,57 @@ function hideQuizArea(){
 };
 
 function displayQuizArea(){
-
+    quizArea.style.display = 'block';
 };
 
 
 function displayHarryQuestion(){
 
     //places the question and choices in the correct locations within quiz area and assigns them a variable
-    let questionElement = document.getElementById("questions");
-    let choicesElement = document.getElementById("choices");
+    let questionElement = document.getElementById("question");
+    let choicesElement = document.getElementById("answer-choices");
 
     //fetches the current question from harryQuestion variable and places it in a variable
-    let question = harryQuestions[currentQuestion];
+    let displayQuestion = harryQuestions[currentQuestion];
     
-    questionElement.textContent = question.questions;
+    questionElement.textContent = displayQuestion.question;
 
     //create choices in buttons
+    
     choicesElement.innerHTML = "";
-    question.choices.forEach((choice, index) => {
-        let input = document.createElement('BUTTON');
-        input.setAttribute('onclick', 'nextQuestion();');
+    displayQuestion.choices.forEach((choice, index) => {
+        let input = document.createElement('input');
+        input.type = "radio";
+        input.name = "answer";
         input.value = "index";
-        input.textContent = choice;
         choicesElement.appendChild(input);
+        
+        let label = document.createElement('label');
+        label.textContent = choice;
+        choicesElement.appendChild(label);
     });
-
-    btnOne.setAttribute('onclick', 'home();');
+    
+    btnOne.setAttribute('onclick', 'nextQuestionOne();');
+    btnOne.textContent = "Next";
+    btnTwo.setAttribute('onclick', 'home();');
+    btnTwo.textContent = "home";
     quizArea.appendChild(btnOne);
-
-    function nextQuestion(){
-        currentQuestion++
-        if(currentQuestion < harryQuestions.length) {
-            displayHarryQuestion();
-        } else {
-            alert('Quiz complete');
-        }
-    };
+    quizArea.appendChild(btnTwo);
 };
 
-
+function nextQuestionOne(){
+    currentQuestion++
+    if(currentQuestion < harryQuestions.length) {
+        displayHarryQuestion();
+    } else {
+        alert('Quiz complete');
+    }
+};
 function runHarryGame(){
-    removeContent();
+    //removeContent();
+    hideMainContent();
     displayQuizArea();
-    displayHarryQuestion();
+    displayHarryQuestion();    
 };
 
 
@@ -262,5 +275,5 @@ function runHermioneGame(){
 };
 
 function home(){
-
+    
 };
