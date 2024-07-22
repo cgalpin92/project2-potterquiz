@@ -175,13 +175,6 @@ let btnTwo = document.createElement('BUTTON');
 let currentQuestion = 0;
 
 
-
-function home(){
-
-};
-
-
-
 function removeContent(){
 
 };
@@ -194,13 +187,13 @@ function removeButtons(){
 
 
 
-function hideGameArea(){
+function hideMainContent(){
 
 };
 
 
 
-function displayGameArea(){
+function displayMainContent(){
 
 };
 
@@ -215,21 +208,45 @@ function displayQuizArea(){
 };
 
 
+function displayHarryQuestion(){
 
-function displayQuestion(){
+    //places the question and choices in the correct locations within quiz area and assigns them a variable
+    let questionElement = document.getElementById("questions");
+    let choicesElement = document.getElementById("choices");
 
+    //fetches the current question from harryQuestion variable and places it in a variable
+    let question = harryQuestions[currentQuestion];
+    
+    questionElement.textContent = question.questions;
+
+    //create choices in buttons
+    choicesElement.innerHTML = "";
+    question.choices.forEach((choice, index) => {
+        let input = document.createElement('BUTTON');
+        input.setAttribute('onclick', 'nextQuestion();');
+        input.value = "index";
+        input.textContent = choice;
+        choicesElement.appendChild(input);
+    });
+
+    btnOne.setAttribute('onclick', 'home();');
+    quizArea.appendChild(btnOne);
+
+    function nextQuestion(){
+        currentQuestion++
+        if(currentQuestion < harryQuestions.length) {
+            displayHarryQuestion();
+        } else {
+            alert('Quiz complete');
+        }
+    };
 };
-
-
-
-function nextQuestion(){
-
-};
-
 
 
 function runHarryGame(){
-
+    removeContent();
+    displayQuizArea();
+    displayHarryQuestion();
 };
 
 
@@ -241,5 +258,9 @@ function runRonGame(){
 
 
 function runHermioneGame(){
+
+};
+
+function home(){
 
 };
