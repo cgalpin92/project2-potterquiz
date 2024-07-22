@@ -58,14 +58,15 @@ p {
 }
 
 button {
-    display: flex;
-    float: right;
+    /*display: flex;
+    float: right;*/
     margin: 3%;
 }
 
 img {
     height: 50%;
     width: 40%;
+    align-items: center;
 }
 
 
@@ -73,7 +74,10 @@ img {
 
 
 /*main styling */
-
+.start-btn {
+    display: flex;
+    justify-content: center;
+}
 
 /* footer styling */
 
