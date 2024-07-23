@@ -217,6 +217,25 @@ function displayQuizArea() {
     quizArea.style.display = 'block';
 };
 
+function scoreCard() {
+    let scoreBoard = document.createElement('div');
+    scoreBoard.setAttribute('id', 'scoreBoard');
+    quizArea.appendChild(scoreBoard);
+    let scoreTitle = document.createElement('h3');
+    scoreTitle.setAttribute('class', 'scoreTitle');
+    scoreTitle.textContent = 'Correct:';
+    scoreBoard.appendChild(scoreTitle);
+    let scoreTitleTwo = document.createElement('h3');
+    scoreTitleTwo.setAttribute('class', 'scoreTitle');
+    scoreTitleTwo.textContent = 'Incorrect:';
+    scoreBoard.appendChild(scoreTitleTwo);
+    let correctAnswers = document.createElement('p');
+    correctAnswers.setAttribute('id', 'correct');
+    scoreTitle.appendChild(correctAnswers);
+    let incorrectAnswers = document.createElement('p');
+    incorrectAnswers.setAttribute('id', 'incorrect');
+    scoreTitleTwo.appendChild(incorrectAnswers);
+};
 
 function displayHarryQuestion() {
 
@@ -284,6 +303,7 @@ function runHarryGame() {
     hideMainContent();
     displayQuizArea();
     displayHarryQuestion();
+    scoreCard();
 };
 
 function displayRonQuestion() {
