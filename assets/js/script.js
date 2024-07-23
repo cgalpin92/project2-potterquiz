@@ -174,6 +174,7 @@ let btnTwo = document.createElement('BUTTON');
 let currentQuestion = 0;
 
 let correctScore = 0;
+let incorrectScore = 0;
 
 //functions
 
@@ -283,7 +284,7 @@ function checkHarryAnswer(choice) {
     if (choice === correct) {
         alert('correct'), addScore();
     } else {
-        alert('wrong');
+        alert('wrong'), addIncorrectScore();
     }
     nextQuestionOne();
 };
@@ -292,6 +293,12 @@ function addScore() {
     correctScore++;
     let correctAnswers = document.getElementById('correct');
     correctAnswers.innerText = correctScore;
+};
+
+function addIncorrectScore() {
+    incorrectScore++;
+    let incorrectAnswers = document.getElementById('incorrect');
+    incorrectAnswers.innerText = incorrectScore;
 };
 
 function nextQuestionOne() {
