@@ -173,6 +173,7 @@ let btnTwo = document.createElement('BUTTON');
 
 let currentQuestion = 0;
 
+let correctScore = 0;
 
 //functions
 
@@ -280,11 +281,17 @@ function checkHarryAnswer(choice) {
     let correct = harryQuestions[currentQuestion].correct;
     console.log('correct: ', correct);
     if (choice === correct) {
-        alert('correct');
+        alert('correct'), addScore();
     } else {
         alert('wrong');
     }
     nextQuestionOne();
+};
+
+function addScore() {
+    correctScore++;
+    let correctAnswers = document.getElementById('correct');
+    correctAnswers.innerText = correctScore;
 };
 
 function nextQuestionOne() {
