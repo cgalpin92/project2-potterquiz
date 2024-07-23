@@ -174,7 +174,18 @@ let btnTwo = document.createElement('BUTTON');
 let currentQuestion = 0;
 
 let correctScore = 0;
+
 let incorrectScore = 0;
+
+let scoreBoard = document.createElement('div');
+
+let scoreTitle = document.createElement('h3');
+
+let scoreTitleTwo = document.createElement('h3');
+
+let correctAnswers = document.createElement('p');
+
+let incorrectAnswers = document.createElement('p');
 
 //functions
 
@@ -210,6 +221,40 @@ function displayMainContent() {
 };
 
 
+function scoreCard() {
+    scoreBoard.setAttribute('id', 'scoreBoard');
+    quizArea.appendChild(scoreBoard);
+    scoreTitle.setAttribute('class', 'scoreTitle');
+    scoreTitle.textContent = 'Correct:';
+    scoreBoard.appendChild(scoreTitle);
+    scoreTitleTwo.setAttribute('class', 'scoreTitle');
+    scoreTitleTwo.textContent = 'Incorrect:';
+    scoreBoard.appendChild(scoreTitleTwo);
+    correctAnswers.setAttribute('id', 'correct');
+    scoreTitle.appendChild(correctAnswers);
+    incorrectAnswers.setAttribute('id', 'incorrect');
+    scoreTitleTwo.appendChild(incorrectAnswers);
+};
+
+function removeScoreCard() {
+    scoreBoard.remove();
+    scoreTitle.remove();
+    scoreTitleTwo.remove();
+    correctAnswers.remove();
+    incorrectAnswers.remove();
+};
+
+function addScore() {
+    correctScore++;
+    let correctAnswers = document.getElementById('correct');
+    correctAnswers.innerText = correctScore;
+};
+
+function addIncorrectScore() {
+    incorrectScore++;
+    let incorrectAnswers = document.getElementById('incorrect');
+    incorrectAnswers.innerText = incorrectScore;
+};
 
 function hideQuizArea() {
     quizArea.style.display = 'none';
@@ -219,25 +264,7 @@ function displayQuizArea() {
     quizArea.style.display = 'block';
 };
 
-function scoreCard() {
-    let scoreBoard = document.createElement('div');
-    scoreBoard.setAttribute('id', 'scoreBoard');
-    quizArea.appendChild(scoreBoard);
-    let scoreTitle = document.createElement('h3');
-    scoreTitle.setAttribute('class', 'scoreTitle');
-    scoreTitle.textContent = 'Correct:';
-    scoreBoard.appendChild(scoreTitle);
-    let scoreTitleTwo = document.createElement('h3');
-    scoreTitleTwo.setAttribute('class', 'scoreTitle');
-    scoreTitleTwo.textContent = 'Incorrect:';
-    scoreBoard.appendChild(scoreTitleTwo);
-    let correctAnswers = document.createElement('p');
-    correctAnswers.setAttribute('id', 'correct');
-    scoreTitle.appendChild(correctAnswers);
-    let incorrectAnswers = document.createElement('p');
-    incorrectAnswers.setAttribute('id', 'incorrect');
-    scoreTitleTwo.appendChild(incorrectAnswers);
-};
+
 
 function displayHarryQuestion() {
 
@@ -255,16 +282,11 @@ function displayHarryQuestion() {
     displayQuestion.choices.forEach((choice, index) => {
         let input = document.createElement('BUTTON');
         input.type = "radio";
-        //input.setAttribute('onclick', 'nextQuestionOne();')
         input.value = "index";
         input.textContent = choice;
         input.setAttribute('class', 'button-choices');
         input.addEventListener('click', () => checkHarryAnswer(choice));
         choicesElement.appendChild(input);
-
-        //let label = document.createElement('label');
-        //label.textContent = choice;
-        //choicesElement.appendChild(label);
     });
 
     // btnOne.setAttribute('onclick', 'nextQuestionOne();');
@@ -273,8 +295,7 @@ function displayHarryQuestion() {
     btnTwo.textContent = "home";
     //quizArea.appendChild(btnOne);
     quizArea.appendChild(btnTwo);
-
-
+    scoreCard();
 };
 
 function checkHarryAnswer(choice) {
@@ -289,17 +310,7 @@ function checkHarryAnswer(choice) {
     nextQuestionOne();
 };
 
-function addScore() {
-    correctScore++;
-    let correctAnswers = document.getElementById('correct');
-    correctAnswers.innerText = correctScore;
-};
 
-function addIncorrectScore() {
-    incorrectScore++;
-    let incorrectAnswers = document.getElementById('incorrect');
-    incorrectAnswers.innerText = incorrectScore;
-};
 
 function nextQuestionOne() {
     currentQuestion++
@@ -317,7 +328,6 @@ function runHarryGame() {
     hideMainContent();
     displayQuizArea();
     displayHarryQuestion();
-    scoreCard();
 };
 
 function displayRonQuestion() {
@@ -337,7 +347,6 @@ function displayRonQuestion() {
     choicesElement.innerHTML = "";
     displayQuestion.choices.forEach((choice, index) => {
         let input = document.createElement('BUTTON');
-        //input.setAttribute('onclick', 'checkAnswer();')
         input.value = "index";
         input.textContent = choice;
         console.log('choice: ', choice)
@@ -351,7 +360,7 @@ function displayRonQuestion() {
     btnTwo.setAttribute('onclick', 'home();');
     btnTwo.textContent = "home";
     //quizArea.appendChild(btnOne);
-    quizArea.appendChild(btnTwo);
+    scoreCard();
 };
 
 function checkRonAnswer(choice) {
@@ -365,9 +374,9 @@ function checkRonAnswer(choice) {
     let correct = ronQuestions[currentQuestion].correct;
     console.log('correct: ', correct);
     if (choice === correct) {
-        alert('correct');
+        alert('correct'), addScore();;
     } else {
-        alert('wrong');
+        alert('wrong'), addIncorrectScore();
     }
     nextQuestionTwo();
 };
@@ -407,7 +416,6 @@ function displayHermioneQuestion() {
     displayQuestion.choices.forEach((choice, index) => {
         let input = document.createElement('BUTTON');
         input.type = "radio";
-        //input.setAttribute('onclick', 'nextQuestionThree();')
         input.value = "index";
         input.textContent = choice;
         input.setAttribute('class', 'button-choices');
@@ -421,6 +429,7 @@ function displayHermioneQuestion() {
     btnTwo.textContent = "home";
     //quizArea.appendChild(btnOne);
     quizArea.appendChild(btnTwo);
+    scoreCard();
 };
 
 function checkHermioneAnswer(choice) {
@@ -428,9 +437,9 @@ function checkHermioneAnswer(choice) {
     let correct = hermioneQuestions[currentQuestion].correct;
     console.log('correct: ', correct);
     if (choice === correct) {
-        alert('correct');
+        alert('correct'), addScore();;
     } else {
-        alert('wrong');
+        alert('wrong'), addIncorrectScore();
     }
     nextQuestionThree();
 };
@@ -454,4 +463,5 @@ function runHermioneGame() {
 function home() {
     displayMainContent();
     hideQuizArea();
+    removeScoreCard();
 };
