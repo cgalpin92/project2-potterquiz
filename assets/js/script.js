@@ -1,7 +1,6 @@
 //Global Variables
 
-let harryQuestions = [
-    {
+let harryQuestions = [{
         question: "What house does Harry belong to?",
         choices: ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"],
         correct: 0
@@ -24,7 +23,7 @@ let harryQuestions = [
     {
         question: "What type of animal does Harry accidentally set free while at the zoo in Harry Potter and the Philosopher's Stone?",
         choices: ["Lion", "Rat", "Snake", "Spider"],
-        correct: 2 
+        correct: 2
     },
     {
         question: "Where was Harry Potter born?",
@@ -44,18 +43,17 @@ let harryQuestions = [
     {
         question: "What fake name does Harry use while attending Bill and Fleur's wedding in disguise in Harry Potter and the Deathly Hallows?",
         choices: ["Barny Weasly", "Bert Weasly", "Bagshot Weasly", "Billy Weasly"],
-        correct: 0 
+        correct: 0
     },
     {
         question: "When is Harry's birthday?",
-        choices: ["June 31st","July 31st", "August 31st", "September 31st"],
+        choices: ["June 31st", "July 31st", "August 31st", "September 31st"],
         correct: 1
     },
-    
+
 ];
 
-let ronQuestions = [
-    {
+let ronQuestions = [{
         question: "What is the name of the Weasley family home?",
         choices: ["Number 12 Grimmauld Place", "Little Whinging", "The Burrow", "Godric's Hollow"],
         correct: 2
@@ -105,12 +103,11 @@ let ronQuestions = [
         choices: ["Luna Lovegood", "Lavender Brown", "Cho Chang", "Padma Patil"],
         correct: 1
     },
-    
+
 ];
 
 
-let hermioneQuestions = [
-    {
+let hermioneQuestions = [{
         question: "What is Hermione's first line in the first movie?",
         choices: ["Has anyone seen a toad?", "Oh, are you doing magic?", "You've got dirt on your nose, by the way", "I'm Hermione Granger"],
         correct: 0
@@ -160,7 +157,7 @@ let hermioneQuestions = [
         choices: ["Transfiguration and Charms", "Herbology and Arithmancy", "Transfiguration and Arithmancy", "Arithmancy and Charms"],
         correct: 3
     },
-    
+
 ];
 
 
@@ -179,7 +176,7 @@ let currentQuestion = 0;
 
 //functions
 
-function createUsername(selected){
+function createUsername(selected) {
     document.querySelector('form').addEventListener('submit', (e) => {
         e.preventDefault();
         let userName = document.getElementById('username').value;
@@ -190,7 +187,7 @@ function createUsername(selected){
 };
 
 
-function hideMainContent(){
+function hideMainContent() {
     let harry = document.getElementById('harry');
     let ron = document.getElementById('ron');
     let hermione = document.getElementById('hermione');
@@ -201,7 +198,7 @@ function hideMainContent(){
 
 
 
-function displayMainContent(){
+function displayMainContent() {
     let harry = document.getElementById('harry');
     let ron = document.getElementById('ron');
     let hermione = document.getElementById('hermione');
@@ -212,16 +209,16 @@ function displayMainContent(){
 
 
 
-function hideQuizArea(){
+function hideQuizArea() {
     quizArea.style.display = 'none';
 };
 
-function displayQuizArea(){
+function displayQuizArea() {
     quizArea.style.display = 'block';
 };
 
 
-function displayHarryQuestion(){
+function displayHarryQuestion() {
 
     //places the question and choices in the correct locations within quiz area and assigns them a variable
     let questionElement = document.getElementById("question");
@@ -229,37 +226,38 @@ function displayHarryQuestion(){
 
     //fetches the current question from harryQuestion variable and places it in a variable
     let displayQuestion = harryQuestions[currentQuestion];
-    
+
     questionElement.textContent = displayQuestion.question;
 
     //create choices    
     choicesElement.innerHTML = "";
     displayQuestion.choices.forEach((choice, index) => {
-        let input = document.createElement('input');
+        let input = document.createElement('BUTTON');
         input.type = "radio";
-        input.name = "answer";
+        input.setAttribute('onclick', 'nextQuestionOne();')
         input.value = "index";
-        input.setAttribute('class', 'radio-button');
+        input.textContent = choice;
+        input.setAttribute('class', 'button-choices');
         choicesElement.appendChild(input);
-        
-        let label = document.createElement('label');
-        label.textContent = choice;
-        choicesElement.appendChild(label);
+
+        //let label = document.createElement('label');
+        //label.textContent = choice;
+        //choicesElement.appendChild(label);
     });
-    
-    btnOne.setAttribute('onclick', 'nextQuestionOne();');
-    btnOne.textContent = "Next";
+
+    // btnOne.setAttribute('onclick', 'nextQuestionOne();');
+    //btnOne.textContent = "Next";
     btnTwo.setAttribute('onclick', 'home();');
     btnTwo.textContent = "home";
-    quizArea.appendChild(btnOne);
+    //quizArea.appendChild(btnOne);
     quizArea.appendChild(btnTwo);
 
-    
+
 };
 
-function nextQuestionOne(){
+function nextQuestionOne() {
     currentQuestion++
-    if(currentQuestion < harryQuestions.length) {
+    if (currentQuestion < harryQuestions.length) {
         displayHarryQuestion();
     } else {
         alert('Quiz complete');
@@ -269,13 +267,13 @@ function nextQuestionOne(){
 
 
 
-function runHarryGame(){
+function runHarryGame() {
     hideMainContent();
     displayQuizArea();
-    displayHarryQuestion();    
+    displayHarryQuestion();
 };
 
-function displayRonQuestion(){
+function displayRonQuestion() {
 
     //places the question and choices in the correct locations within quiz area and assigns them a variable
     let questionElement = document.getElementById("question");
@@ -291,29 +289,26 @@ function displayRonQuestion(){
     //create choices    
     choicesElement.innerHTML = "";
     displayQuestion.choices.forEach((choice, index) => {
-        let input = document.createElement('input');
+        let input = document.createElement('BUTTON');
         input.type = "radio";
-        input.name = "answer";
+        input.setAttribute('onclick', 'nextQuestionTwo();')
         input.value = "index";
-        input.setAttribute('class', 'radio-button');
+        input.textContent = choice;
+        input.setAttribute('class', 'button-choices');
         choicesElement.appendChild(input);
-        
-        let label = document.createElement('label');
-        label.textContent = choice;
-        choicesElement.appendChild(label);
     });
-    
-    btnOne.setAttribute('onclick', 'nextQuestionTwo();');
-    btnOne.textContent = "Next";
+
+    //btnOne.setAttribute('onclick', 'nextQuestionTwo();');
+    //btnOne.textContent = "Next";
     btnTwo.setAttribute('onclick', 'home();');
     btnTwo.textContent = "home";
-    quizArea.appendChild(btnOne);
+    //quizArea.appendChild(btnOne);
     quizArea.appendChild(btnTwo);
 };
 
-function nextQuestionTwo(){
+function nextQuestionTwo() {
     currentQuestion++
-    if(currentQuestion < ronQuestions.length) {
+    if (currentQuestion < ronQuestions.length) {
         displayRonQuestion();
     } else {
         alert('Quiz complete');
@@ -321,14 +316,14 @@ function nextQuestionTwo(){
     }
 };
 
-function runRonGame(){
+function runRonGame() {
     hideMainContent();
     displayQuizArea();
     displayRonQuestion();
 };
 
 
-function displayHermioneQuestion(){
+function displayHermioneQuestion() {
 
     //places the question and choices in the correct locations within quiz area and assigns them a variable
     let questionElement = document.getElementById("question");
@@ -336,35 +331,32 @@ function displayHermioneQuestion(){
 
     //fetches the current question from harryQuestion variable and places it in a variable
     let displayQuestion = hermioneQuestions[currentQuestion];
-    
+
     questionElement.textContent = displayQuestion.question;
 
     //create choices    
     choicesElement.innerHTML = "";
     displayQuestion.choices.forEach((choice, index) => {
-        let input = document.createElement('input');
+        let input = document.createElement('BUTTON');
         input.type = "radio";
-        input.name = "answer";
+        input.setAttribute('onclick', 'nextQuestionThree();')
         input.value = "index";
-        input.setAttribute('class', 'radio-button');
+        input.textContent = choice;
+        input.setAttribute('class', 'button-choices');
         choicesElement.appendChild(input);
-        
-        let label = document.createElement('label');
-        label.textContent = choice;
-        choicesElement.appendChild(label);
     });
-    
-    btnOne.setAttribute('onclick', 'nextQuestionThree();');
-    btnOne.textContent = "Next";
+
+    //btnOne.setAttribute('onclick', 'nextQuestionThree();');
+    //btnOne.textContent = "Next";
     btnTwo.setAttribute('onclick', 'home();');
     btnTwo.textContent = "home";
-    quizArea.appendChild(btnOne);
+    //quizArea.appendChild(btnOne);
     quizArea.appendChild(btnTwo);
 };
 
-function nextQuestionThree(){
+function nextQuestionThree() {
     currentQuestion++
-    if(currentQuestion < hermioneQuestions.length) {
+    if (currentQuestion < hermioneQuestions.length) {
         displayHermioneQuestion();
     } else {
         alert('Quiz complete');
@@ -372,13 +364,13 @@ function nextQuestionThree(){
     }
 };
 
-function runHermioneGame(){
+function runHermioneGame() {
     hideMainContent();
     displayQuizArea();
     displayHermioneQuestion();
 };
 
-function home(){
+function home() {
     displayMainContent();
     hideQuizArea();
 };
