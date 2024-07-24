@@ -74,9 +74,41 @@
 
 ## Testing 
 
+  - I have tested the game in the following browsers to confirm it works across different browsers:
+    - Safari
+    - Chrome
+    - Mozilla Firefox
+    - Microsoft Edge
+
+  - Through the use of DevTools I can confirm that the site is responsive across the standard screen sizes;
+   - Mobile < = 768px
+   - Tablet > = 768px
+   - Laptop > = 992px
+   - Desktop > = 1200px
+
+  - I confirm that the Header and Footer are clearly defined to the user and easy to read. The rules of the game are clearly layed out and the function of the game is simple to navigate. 
+
+  - I have tested that the create username input works.
+
+  - I have tested each quiz to ensure that all questions appear correctly, that the checkAnswer function works and identifies the correct answer and the choice selected by the user. I have checked that when either the correct or incorrect selection is identifies, the relevant score increments correctly.
+
 
 
 ### Validator Testing 
+
+  -__HTML__
+    - No errors were returned when passing HTML code from index.html through the official W3C validator.
+
+  -__CSS__
+
+
+  -__JavaScript__
+
+
+  -__Accessibility__
+    - By running the game through lighthouse in Chrome DevTools I was able to confirm:
+      - that the fonts and colors chosen throughout the game are easy to read and accessible.
+      - that the buttons and input elements were accessible throughout the game.
 
 
 ### Unfixed Bugs
