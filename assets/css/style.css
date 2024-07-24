@@ -39,7 +39,7 @@ h1 {
 h2 {
     font-family: 'Julius Sans One', sans-serif;
     font-size: 200%;
-    padding: 10%;
+    padding: 5%;
 
 
 }
@@ -109,3 +109,15 @@ input.radio-button {
 
 
 /* media querys */
+
+/* styling for smaller screens */
+@media screen and (max-width: 374px) {}
+
+/* styling for larger screens */
+@media screen and (min-width: 768px) {}
+
+@media screen and (min-width: 992px) {}
+
+@media screen and (min-width: 1200px) {}
+
+@media screen and (min-width: 1400px) {}

@@ -264,6 +264,10 @@ function displayQuizArea() {
     quizArea.style.display = 'block';
 };
 
+function resetScore() {
+    correctScore = 0;
+    incorrectScore = 0;
+}
 
 
 function displayHarryQuestion() {
@@ -317,7 +321,7 @@ function nextQuestionOne() {
     if (currentQuestion < harryQuestions.length) {
         displayHarryQuestion();
     } else {
-        alert('Quiz complete');
+        alert('Quiz complete'), resetScore();
         currentQuestion = 0;
     }
 };
