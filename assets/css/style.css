@@ -159,10 +159,16 @@ label {
 @media screen and (min-width: 992px) {
     #main-content {
         display: flex;
+        justify-content: space-between;
     }
 
     .main-content-items {
-        justify-content: space-between;
+        width: 340px;
+    }
+
+    img {
+        height: 230px;
+        width: 170px;
     }
 }
 
