@@ -195,6 +195,12 @@ label {
         margin: 5% 20%;
         justify-content: space-evenly;
     }
+
+    .button-choices {
+        font-size: 150%;
+        margin: 9%;
+        padding: 4%;
+    }
 }
 
 @media screen and (min-width: 1200px) {}
