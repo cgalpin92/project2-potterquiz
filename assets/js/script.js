@@ -193,7 +193,12 @@ function createUsername(selected) {
     document.querySelector('form').addEventListener('submit', (e) => {
         e.preventDefault();
         let userName = document.getElementById('username').value;
-        document.getElementById('username-field').textContent = `Hello, ${userName}`;
+        let usernameField = document.createElement('h2');
+        usernameField.setAttribute('id', 'username-field');
+        usernameField.textContent = `Hello, ${userName}`;
+        let usernameOutput = document.getElementById('username-output');
+        usernameOutput.appendChild(usernameField);
+
     })
     let userNameInput = document.getElementById('username-input');
     userNameInput.style.display = "none";
