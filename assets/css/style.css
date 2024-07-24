@@ -65,6 +65,7 @@ button {
     font-family: 'Julius Sans One', sans-serif;
     font-weight: bolder;
     box-shadow: 1px 1px 7px darkred;
+
 }
 
 img {
@@ -81,6 +82,7 @@ img {
 .start-btn {
     display: flex;
     justify-content: center;
+    -webkit-appearance: none;
 }
 
 label {
