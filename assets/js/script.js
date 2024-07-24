@@ -285,7 +285,6 @@ function displayHarryQuestion() {
     choicesElement.innerHTML = "";
     displayQuestion.choices.forEach((choice, index) => {
         let input = document.createElement('BUTTON');
-        input.type = "radio";
         input.value = "index";
         input.textContent = choice;
         input.setAttribute('class', 'button-choices');
@@ -419,7 +418,6 @@ function displayHermioneQuestion() {
     choicesElement.innerHTML = "";
     displayQuestion.choices.forEach((choice, index) => {
         let input = document.createElement('BUTTON');
-        input.type = "radio";
         input.value = "index";
         input.textContent = choice;
         input.setAttribute('class', 'button-choices');

@@ -84,9 +84,9 @@ label {
     justify-content: space-evenly;
 }
 
-input.radio-button {
+/*input.radio-button {
     margin-top: 10%;
-}
+}*/
 
 .button-choices {
     font-family: 'Philosopher', sans-serif;
