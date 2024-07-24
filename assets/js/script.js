@@ -270,9 +270,11 @@ function displayQuizArea() {
 };
 
 function resetScore() {
-    correctScore = 0;
-    incorrectScore = 0;
-}
+    correctScore = 0
+    correctAnswers.innerHTML = correctScore;
+    incorrectScore = 0
+    incorrectAnswers.innerHTML = correctScore
+};
 
 
 function displayHarryQuestion() {
@@ -304,6 +306,8 @@ function displayHarryQuestion() {
     // btnOne.setAttribute('onclick', 'nextQuestionOne();');
     //btnOne.textContent = "Next";
     scoreCard();
+    console.log('correct answer: ', correctAnswers.value);
+    console.log('incorrect answer: ', incorrectAnswers.value);
     btnTwo.setAttribute('onclick', 'home();');
     btnTwo.textContent = "home";
     //quizArea.appendChild(btnOne);
@@ -487,5 +491,6 @@ function home() {
     displayMainContent();
     hideQuizArea();
     removeScoreCard();
+    resetScore();
     currentQuestion = 0;
 };
