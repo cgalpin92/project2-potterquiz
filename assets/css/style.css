@@ -157,6 +157,11 @@ label {
 }
 
 @media screen and (min-width: 992px) {
+
+    #game-area {
+        margin-top: 4%;
+    }
+
     #main-content {
         display: flex;
         justify-content: space-between;
