@@ -16,6 +16,8 @@ body {
 header {
     background-color: black;
     color: whitesmoke;
+
+
 }
 
 main {
@@ -34,6 +36,8 @@ footer {
 h1 {
     font-family: 'Philosopher', sans-serif;
     font-size: 350%;
+    text-transform: uppercase;
+    letter-spacing: 5px;
 }
 
 h2 {
