@@ -136,6 +136,10 @@ label {
         padding: 2%;
     }
 
+    p {
+        font-size: 200%;
+    }
+
     label {
         font-size: 180%;
         margin-top: 2%;
