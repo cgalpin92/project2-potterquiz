@@ -156,7 +156,15 @@ label {
     }
 }
 
-@media screen and (min-width: 992px) {}
+@media screen and (min-width: 992px) {
+    #main-content {
+        display: flex;
+    }
+
+    .main-content-items {
+        justify-content: space-between;
+    }
+}
 
 @media screen and (min-width: 1200px) {}
 
