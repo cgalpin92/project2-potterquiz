@@ -192,6 +192,7 @@ let incorrectAnswers = document.createElement('p');
 function createUsername(selected) {
     document.querySelector('form').addEventListener('submit', (e) => {
         e.preventDefault();
+        //formValidation();
         let userName = document.getElementById('username').value;
         let usernameField = document.createElement('h2');
         usernameField.setAttribute('id', 'username-field');
@@ -202,6 +203,14 @@ function createUsername(selected) {
     })
     let userNameInput = document.getElementById('username-input');
     userNameInput.style.display = "none";
+};
+
+function formValidation() {
+    let valueCheck = document.getElementById('username').value;
+    if (valueCheck === "") {
+        alert('You must create a username before proceeding');
+
+    }
 };
 
 
@@ -345,9 +354,14 @@ function nextQuestionOne() {
 
 
 function runHarryGame() {
-    hideMainContent();
-    displayQuizArea();
-    displayHarryQuestion();
+    let valueCheck = document.getElementById('username').value;
+    if (valueCheck === "") {
+        alert('You must create a username before proceeding');
+    } else {
+        hideMainContent();
+        displayQuizArea();
+        displayHarryQuestion();
+    }
 };
 
 function displayRonQuestion() {
@@ -422,9 +436,14 @@ function nextQuestionTwo() {
 
 
 function runRonGame() {
-    hideMainContent();
-    displayQuizArea();
-    displayRonQuestion();
+    let valueCheck = document.getElementById('username').value;
+    if (valueCheck === "") {
+        alert('You must create a username before proceeding');
+    } else {
+        hideMainContent();
+        displayQuizArea();
+        displayRonQuestion();
+    }
 };
 
 
@@ -490,9 +509,14 @@ function nextQuestionThree() {
 };
 
 function runHermioneGame() {
-    hideMainContent();
-    displayQuizArea();
-    displayHermioneQuestion();
+    let valueCheck = document.getElementById('username').value;
+    if (valueCheck === "") {
+        alert('You must create a username before proceeding');
+    } else {
+        hideMainContent();
+        displayQuizArea();
+        displayHermioneQuestion();
+    }
 };
 
 function home() {
