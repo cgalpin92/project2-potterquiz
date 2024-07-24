@@ -171,6 +171,14 @@ label {
         width: 340px;
     }
 
+    h2 {
+        font-size: 170%;
+    }
+
+    p {
+        font-size: 155%;
+    }
+
     img {
         height: 230px;
         width: 170px;
