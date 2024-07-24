@@ -303,11 +303,12 @@ function displayHarryQuestion() {
 
     // btnOne.setAttribute('onclick', 'nextQuestionOne();');
     //btnOne.textContent = "Next";
+    scoreCard();
     btnTwo.setAttribute('onclick', 'home();');
     btnTwo.textContent = "home";
     //quizArea.appendChild(btnOne);
     quizArea.appendChild(btnTwo);
-    scoreCard();
+
 };
 
 function checkHarryAnswer(choice) {
@@ -373,10 +374,12 @@ function displayRonQuestion() {
 
     //btnOne.setAttribute('onclick', 'nextQuestionTwo();');
     //btnOne.textContent = "Next";
+    scoreCard();
     btnTwo.setAttribute('onclick', 'home();');
     btnTwo.textContent = "home";
+    quizArea.appendChild(btnTwo);
     //quizArea.appendChild(btnOne);
-    scoreCard();
+
 };
 
 function checkRonAnswer(choice) {
@@ -444,11 +447,12 @@ function displayHermioneQuestion() {
 
     //btnOne.setAttribute('onclick', 'nextQuestionThree();');
     //btnOne.textContent = "Next";
+    scoreCard();
     btnTwo.setAttribute('onclick', 'home();');
     btnTwo.textContent = "home";
     //quizArea.appendChild(btnOne);
     quizArea.appendChild(btnTwo);
-    scoreCard();
+
 };
 
 function checkHermioneAnswer(choice) {
