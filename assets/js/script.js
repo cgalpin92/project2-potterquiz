@@ -278,6 +278,10 @@ function resetScore() {
 function displayHarryQuestion() {
 
     //places the question and choices in the correct locations within quiz area and assigns them a variable
+    let questionDiv = document.getElementById('question-div');
+    let questionHeading = document.createElement('h3');
+    questionHeading.setAttribute('id', 'question');
+    questionDiv.appendChild(questionHeading);
     let questionElement = document.getElementById("question");
     let choicesElement = document.getElementById("answer-choices");
 
@@ -341,6 +345,10 @@ function runHarryGame() {
 function displayRonQuestion() {
 
     //places the question and choices in the correct locations within quiz area and assigns them a variable
+    let questionDiv = document.getElementById('question-div');
+    let questionHeading = document.createElement('h3');
+    questionHeading.setAttribute('id', 'question');
+    questionDiv.appendChild(questionHeading);
     let questionElement = document.getElementById("question");
     let choicesElement = document.getElementById("answer-choices");
 
@@ -411,6 +419,10 @@ function runRonGame() {
 function displayHermioneQuestion() {
 
     //places the question and choices in the correct locations within quiz area and assigns them a variable
+    let questionDiv = document.getElementById('question-div');
+    let questionHeading = document.createElement('h3');
+    questionHeading.setAttribute('id', 'question');
+    questionDiv.appendChild(questionHeading);
     let questionElement = document.getElementById("question");
     let choicesElement = document.getElementById("answer-choices");
 
