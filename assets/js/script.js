@@ -330,11 +330,14 @@ function checkHarryAnswer(choice) {
 
 
 function nextQuestionOne() {
+    let username = document.getElementById('username').value;
+    console.log('username: ', username);
+    let totalScore = document.getElementById('correct').textContent;
     currentQuestion++
     if (currentQuestion < harryQuestions.length) {
         displayHarryQuestion();
     } else {
-        alert('Quiz complete'), resetScore();
+        alert(`Quiz complete!! Well done ${username}, you got ${totalScore} out of 10 correct. Return to Home Page and either replay this quiz to try and beat your score, or why not try testing your knowledge on Ron and Hermione`);
         currentQuestion = 0;
     }
 };
@@ -405,11 +408,13 @@ function checkRonAnswer(choice) {
 };
 
 function nextQuestionTwo() {
+    let username = document.getElementById('username').value;
+    let totalScore = document.getElementById('correct').textContent;
     currentQuestion++
     if (currentQuestion < ronQuestions.length) {
         displayRonQuestion();
     } else {
-        alert('Quiz complete');
+        alert(`Quiz complete!! Well done ${username}, you got ${totalScore} out of 10 correct. Return to Home Page and either replay this quiz to try and beat your score, or why not try testing your knowledge on Harry and Hermione?`);
         currentQuestion = 0;
     }
 };
@@ -472,11 +477,14 @@ function checkHermioneAnswer(choice) {
 };
 
 function nextQuestionThree() {
+    let username = document.getElementById('username').value;
+    let totalScore = document.getElementById('correct').textContent;
+    console.log('total score: '.totalScore);
     currentQuestion++
     if (currentQuestion < hermioneQuestions.length) {
         displayHermioneQuestion();
     } else {
-        alert('Quiz complete');
+        alert(`Quiz complete!! Well done ${username}, you got ${totalScore} out of 10 correct. Return to Home Page and either replay this quiz to try and beat your score, or why not try testing your knowledge on Harry and Ron?`);
         currentQuestion = 0;
     }
 };
