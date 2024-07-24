@@ -142,6 +142,10 @@ label {
         margin-right: 3%;
         padding: 1% 6%;
     }
+
+    #create-btn {
+        font-size: 120%;
+    }
 }
 
 @media screen and (min-width: 992px) {}
