@@ -487,4 +487,5 @@ function home() {
     displayMainContent();
     hideQuizArea();
     removeScoreCard();
+    currentQuestion = 0;
 };
