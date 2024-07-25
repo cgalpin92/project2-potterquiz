@@ -139,7 +139,7 @@ let hermioneQuestions = [{
     },
     {
         question: "What is Hermione's wand core?",
-        choices: ["Pheonix feather", "Unicorn hair", "Ownl feather", "Dragon heartstring"],
+        choices: ["Pheonix feather", "Unicorn hair", "Owl feather", "Dragon heartstring"],
         correct: "Dragon heartstring"
     },
     {
