@@ -2,7 +2,9 @@
 
 ## Intro
 
-![Responsice Mockup]()
+![Responsice Mockup](media/potter-quiz-mockup.png) 
+
+![Second Responsice Mockup](media/potter-quiz-mockup-two.png)
 
 ## User Experience Stories
 
@@ -35,11 +37,15 @@
   - The Header has a black background with white smoke font which which is clear and stands out to the user. 
   - The font is capitalized to clearly identify to the user its the title of the game. 
 
+  ![screenshot of header on main page](media/header.png)
+
 - __Welcome Section__
 
   - The Welcome Section introduces the player to the game. It includes a How to Play section which talks the user through the steps to start the game. It also informs them they can play as many times as they wish to try and beat their previous score and that their final score from each attempt at a game will display at the bottom of the page.
   - The font is black on a white smoke background which is clear for the player to read.
   - Its located before the Create Username section so that the player understands they are required to create a username to start playing.
+
+  ![screenshot of Welcome Section](media/welcome_section.png)
 
 - __Username Section__
 
@@ -47,6 +53,9 @@
   - The font is black on white background which is clear and stands out to the user.
   - This section is located at the top of the page before the user reaches the game itself. 
   - The player is also unable to enter a blank value within the username field, if they attempt to do this an alert will appear once Create is selected informing the player they are required to enter a valid username.
+
+![screenshot of Username Section](media/create_username.png)
+![screenshot of Username Section after username has been created](media/username-created.png)  
 
 - __Game Area__
 
@@ -60,6 +69,9 @@
     - All font within the Main Contents are black on white background which is clear for the player.
     - The button has a box-boarder shadow of dark red.
 
+    ![screenshot of Game Choices](media/game_choices_larger_screens.png)
+    ![screenshot of Game Choices on smaller screens](media/game_choices_smaller_screens.png)
+
   - Quiz Area: 
     - The Quiz Area of the Game Area Section is hidden initially to the player. Once the player selects a game choice the Quiz Section for that game choice appears and replaces the Main Contents section of the Game Area.
     - The Quiz Area consists of:
@@ -69,6 +81,9 @@
       - A score board labelled with 'Correct' and 'Incorrect'. The relative label will increment after each question depending on if the user selects the correct or incorrect answer. If the player replays the game the score for both 'Correct' and 'Incorrect' will reset to 0.
     - All font within the Quiz Area is black on white background which is clear for the user.
     - If the player exists the game and selects 'Begin Quiz' again the game resets back to the start and the user starts the game again.
+
+    ![screenshot of Quiz Area](media/quiz_area.png)
+    ![screenshot of Quiz Area](media/quiz_area_smaller_page.png)
   
 
 - __Footer__
@@ -77,6 +92,8 @@
   - The background is black with white font to mimic the Header of the game and make the text clear for the user to read.
   - If the player attempts a game again and receives a new score, the corresponding total score will be replaced with the new score.
 
+![screenshot of Footer](media/footer.png)
+![screenshot of Footer with total scores](media/footer_two.png)
 
 ### Features Left to Implement
 
@@ -88,6 +105,8 @@
   - Animation on the home screen when the user firsts accesses the site.
   - The user is informed of the correct answers when selecting an incorrect answer in the game.
   - Receive a final score which is a combination of all 3 total scores after completeting all 3 games.
+
+  ![screenshot of Wwlcome Section]
 
 
 
@@ -111,11 +130,11 @@
 
   - I have tested that the player is required to create a username before they can proceed with playing the game.
 
-  - I have tested each quiz to ensure that all questions appear correctly, that the checkAnswer function works and identifies the correct answer for the choice selected by the player. I have checked that when either the correct or incorrect selection is identifies, the relevant score increments correctly. 
+  - I have tested each quiz to ensure that all questions appear correctly, that the checkAnswer function works and identifies the correct answer for the choice selected by the player. I have checked that when either the correct or incorrect selection is identified, the relevant score increments correctly. 
   
   - I have tested that the correct alert message appears depending on the score the player achieves;
     - If the player achieves 0 correct scores the alert message offers condolences.
-    - If the player achieves some correct score and some incorrect scores the alert message congratulates the user but suggests they play again and try and beat the score.
+    - If the player achieves some correct scores and some incorrect scores the alert message congratulates the user but suggests they play again and try and beat the score.
     - If the player achieves 10 out of 10 correct they are congratulated but not offered to beat their score as this is not possible.
   
   - I have tested that when replaying a game:
