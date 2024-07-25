@@ -107,6 +107,7 @@
     - No errors were returned when passing HTML code from index.html through the official W3C validator.
 
   -__CSS__
+    - No errors were returned when passing through the official (Jigsaw) validator.
 
 
   -__JavaScript__
