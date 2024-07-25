@@ -268,12 +268,21 @@ label {
         font-size: 260%;
     }
 
-
+    #welcome-message {
+        font-size: 145%;
+    }
 
     li {
         font-size: 145%;
         padding: 2%;
     }
 
+    #username-field {
+        font-size: 200%;
+    }
+
+    #answer-choices {
+        margin: 1% 20%;
+    }
 
 }
