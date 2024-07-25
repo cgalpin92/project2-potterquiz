@@ -7,7 +7,7 @@
 ## User Experience Stories
 
  - As a user I want to test my knowledge on the three main characters of Harry Potter.
- - As a user I want to understand the rules of the game.
+ - As a user I want to understand how to play the game.
  - As a users I want to try and beat my score each time.
 
 
@@ -29,26 +29,26 @@
 
 ### Existing Features
 
--__Header__
+- __Header__
   
   - The Header encompasses the Title of the Game. It located at the top of the page with the Title centered.
   - The Header has a black background with white smoke font which which is clear and stands out to the user. 
   - The font is capitalized to clearly identify to the user its the title of the game. 
 
--__Welcome Section__
+- __Welcome Section__
 
   - The Welcome Section introduces the player to the game. It includes a How to Play section which talks the user through the steps to start the game. It also informs them they can play as many times as they wish to try and beat their previous score and that their final score from each attempt at a game will display at the bottom of the page.
   - The font is black on a white smoke background which is clear for the player to read.
   - Its located before the Create Username section so that the player understands they are required to create a username to start playing.
 
--__Username Section__
+- __Username Section__
 
- - The Username section encompases a title asking the user to create a username, an input field for the user to enter a username and a button to create the username.
- - The font is black on white background which is clear and stands out to the user.
- - This section is located at the top of the page before the user reaches the game itself. 
- - The player is also unable to enter a blank value within the username field, if they attempt to do this an alert will appear once Create is selected informing the player they are required to enter a valid username.
+  - The Username section encompases a title asking the user to create a username, an input field for the user to enter a username and a button to create the username.
+  - The font is black on white background which is clear and stands out to the user.
+  - This section is located at the top of the page before the user reaches the game itself. 
+  - The player is also unable to enter a blank value within the username field, if they attempt to do this an alert will appear once Create is selected informing the player they are required to enter a valid username.
 
--__Game Area__
+- __Game Area__
 
  - Main Contents:
     - The Main Contents of the Game Area Section consists of the three game choices for the player, defined in 3 clear sections which are either stacked vertically on smaller screens or horizontally on larger screens.
@@ -71,11 +71,11 @@
     - If the player exists the game and selects 'Begin Quiz' again the game resets back to the start and the user starts the game again.
   
 
--__Footer__
+- __Footer__
 
- - The aim of this section is showcase the total scores of each game once the player has completed each game.
- - The background is black with white font to mimic the Header of the game and make the text clear for the user to read.
- - If the player attempts a game again and receives a new score, the corresponding total score will be replaced with the new score.
+  - The aim of this section is showcase the total score of each game once each game is complete.
+  - The background is black with white font to mimic the Header of the game and make the text clear for the user to read.
+  - If the player attempts a game again and receives a new score, the corresponding total score will be replaced with the new score.
 
 
 ### Features Left to Implement
@@ -127,23 +127,65 @@
 
 ### Validator Testing 
 
-  -__HTML__
+  - __HTML__
     - No errors were returned when passing HTML code from index.html through the official W3C validator.
 
-  -__CSS__
+  - __CSS__
     - No errors were returned when passing through the official (Jigsaw) validator.
 
 
-  -__JavaScript__
+  - __JavaScript__
 
 
-  -__Accessibility__
+  - __Accessibility__
     - By running the game through lighthouse in Chrome DevTools I was able to confirm:
       - that the fonts and colors chosen throughout the game are easy to read and accessible.
       - that the buttons and input elements were accessible throughout the game.
 
+## Bugs
+
+### Fixed Bugs
+
+  - displayHarryQuestions function not running:
+    - When testing the function by selecting the Begin Quiz for Harry Questions, received an error within the console stating it could not 'set properties of null (setting 'textContent)
+    - Through using chrome DevTools I found the line of the function that the error derived from. I discovered this was due to an incorrect spelling of an Id name.
+    - I changed this to correct spelling of the Id 'question'. 
+    - Correcting the spelling fixed the problem.
+  
+  - Game not restarting or refreshing:
+    - When running the game, exiting the game and re-entering the game, I found it continued from the question in the game I had left it on. Also, once completing the game, navigating back to home and then re-loading the game, the game did not restart, it displayed the last question with the last choice selected.
+    - Through the use of console.logs I discovered that the current question index was not reverting back to 0.
+    - Added the following line of code to the end of the function calling the next question 'currentQuestion = 0' so that once the final question had been called, the question index would revert back to 0 and the first question would be called again. I then added the same line of code to the end of the function used to navigate back to the home screen, so that if called because the player decided to leave the game early, it would set the current question index back to 0, and when navigating back to the game the first question would be called again.
+    - Adding this same line of code to the two seperate functions resolved the issue.
+  
+  - duplication of score cards:
+    - I found that each time the Begin Quiz function was called an additional h3 element was being added to the score card.
+    - This was due to a part of the function to display the questions which creates the h3 element to display the score number. Each time the function was called it was creating another h3 element.
+    - I resolved this through creating a function which removes the h3 element when the game is ended and the player navigates back to home. 
+  
+  - default button settings on mobile devices:
+    - When testing the quiz on a mobile device I found that the button styles I had applied using CSS were not displaying. Instead the default browser button styles were showing.
+    - I searched online for some potential solutions and attempted to resolve by adding -webkit-appearance: none to the button styling within CSS. The buttons were still showing in their default styling.
+    - I realised I had not set a background color or font color for the buttons. Applied this to all buttons and the styling I had applied within the CSS file was now showing on mobile devices. This resolved the issue.
+  
+  - Score card not resetting when starting a new game:
+    - Found that when restarting a game the correct and incorrect scores were not resetting. Instead they continued to update.
+    - Created a function 'resetScore' to update the input for correct and incorrect score to 0, and applied this function to the home function so that when leaving the game the scores reset.
+  
+  - Extra space being created after each question:
+    - When running through the questions in each game, space between the question and the heading displaying the username was increasing.
+    - Through chrome DevTools I noticed these were blank h3 elements.
+    - Through checking the display question function I found this was due to part of the function creating the heading to display the question, each time the display question function was run it was creating a new h3 element below the last.
+    - Resolved this through creating a seperate function to create the h3 element, and then calling the display question function within the new function. This resolved the issue of duplicate h3 elements being created.
+
+  - Total score not resetting after each run of the game:
+    - Found that the total score displayed in the footer was not resetting to 0 if a game was replayed.
+    - Set totalScoreNumber as a global variable so that multiple functions could access it. Applied totalScoreNumber.textContent = "0" to the run game function so that if this function is called the total score goes back to 0.
+
 
 ### Unfixed Bugs
+
+  - No unfixed bugs.
 
 
 ## Deployment
