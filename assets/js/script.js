@@ -224,9 +224,11 @@ function hideMainContent() {
 
 
 function displayMainContent() {
+    let welcome = document.getElementById('welcome');
     let harry = document.getElementById('harry');
     let ron = document.getElementById('ron');
     let hermione = document.getElementById('hermione');
+    welcome.style.display = "block";
     harry.style.display = "block";
     ron.style.display = "block";
     hermione.style.display = "block";
