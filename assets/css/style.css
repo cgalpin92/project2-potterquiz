@@ -249,30 +249,4 @@ label {
     }
 }
 
-@media screen and (min-width: 1400px) {
-
-    h2 {
-        padding-top: 5%;
-        padding-bottom: 2%;
-    }
-
-    #welcome-title {
-        font-size: 260%;
-    }
-
-    #welcome-message {
-        font-size: 145%;
-    }
-
-    li {
-        font-size: 145%;
-    }
-
-    #username-field {
-        font-size: 200%;
-    }
-
-    #answer-choices {
-        margin: 1% 20%;
-    }
-}
+@media screen and (min-width: 1400px) {}
