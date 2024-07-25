@@ -375,13 +375,18 @@ function runHarryGame() {
     }
 };
 
-function displayRonQuestion() {
-
-    //places the question and choices in the correct locations within quiz area and assigns them a variable
+function runGameTwo() {
     let questionDiv = document.getElementById('question-div');
     let questionHeading = document.createElement('h3');
     questionHeading.setAttribute('id', 'question');
     questionDiv.appendChild(questionHeading);
+    displayRonQuestion();
+}
+
+function displayRonQuestion() {
+
+    //places the question and choices in the correct locations within quiz area and assigns them a variable
+
     let questionElement = document.getElementById("question");
     let choicesElement = document.getElementById("answer-choices");
 
@@ -457,18 +462,23 @@ function runRonGame() {
     } else {
         hideMainContent();
         displayQuizArea();
-        displayRonQuestion();
+        runGameTwo();
+        //displayRonQuestion();
     }
 };
 
-
-function displayHermioneQuestion() {
-
-    //places the question and choices in the correct locations within quiz area and assigns them a variable
+function runGameThree() {
     let questionDiv = document.getElementById('question-div');
     let questionHeading = document.createElement('h3');
     questionHeading.setAttribute('id', 'question');
     questionDiv.appendChild(questionHeading);
+    displayHermioneQuestion();
+}
+
+function displayHermioneQuestion() {
+
+    //places the question and choices in the correct locations within quiz area and assigns them a variable
+
     let questionElement = document.getElementById("question");
     let choicesElement = document.getElementById("answer-choices");
 
@@ -534,7 +544,8 @@ function runHermioneGame() {
     } else {
         hideMainContent();
         displayQuizArea();
-        displayHermioneQuestion();
+        runGameThree();
+        //displayHermioneQuestion();
     }
 };
 
