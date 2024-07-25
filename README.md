@@ -197,13 +197,54 @@ This section should describe the process you went through to deploy the project 
   - From the source section drop-down menu, select the Master Branch
   - Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment. 
 
-The live link can be found here - https://code-institute-org.github.io/love-running-2.0/index.html 
+The live link can be found here - https://cgalpin92.github.io/project2-potterquiz/
 
 
 ## Credits 
 
 
 ### Content 
+
+  - The questions used within each game were sourced from BuzzFeed:
+    - https://github.com/cgalpin92/project-portfolio1-moonlandingmuseum/blob/main/README.md?plain=1
+    - https://www.buzzfeed.com/sanjanaashokvarda/can-you-ace-this-hermione-granger-trivia-quiz 
+
+  - Code sourced or guidance taken from SheCodes:
+    - Targetting a button selection - https://www.shecodes.io/athena/7288-how-to-target-only-one-button-while-writing-in-javascript#:~:text=In%20JavaScript%2C%20you%20can%20use,through%20the%20addEventListener()%20method.&text=This%20attaches%20the%20function%20to,in%20the%20myFunction()%20body.
+    - For placing the value from an input into a heading element - https://www.shecodes.io/athena/5824-how-to-change-h1-to-the-user-name-submitted-in-search-engine
+    - Placing functions within functions - https://www.shecodes.io/athena/1697-can-i-place-a-function-in-another-function-in-javascript#:~:text=Yes%2C%20a%20function%20can%20be,function%20and%20example%20code%20provided.
+
+  - Code sourced or guidance taken from w3 schools
+    - For hiding and displaying the main content and quiz area - https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp 
+    - For validating the form within Javascript and ensure a valid username is created before the player can start the game - https://www.w3schools.com/js/js_validation.asp
+
+  - Code sourced or guidance taken from Dev Community:
+    - creating the scorecard within the footer - https://dev.to/davidchedrick/creating-a-simple-timer-and-score-keeper-in-javascript-394g 
+  
+  - Code sourced or guidance taken from Stackoverflow:
+    - For creating the check answers function - https://stackoverflow.com/questions/73310918/how-do-i-check-the-answer-of-a-clicked-button-to-see-if-it-matches-the-correct-a 
+
+  - Code sourced or guidance taken from mdn web docs: 
+    - For creating an if else else statement used to check the end score and return a value based on the score - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else
+
+  - Code sourced or guidance taken from Sitepoint community:
+    - For the use of if else statements within nextQuestion functions - https://www.sitepoint.com/community/t/resolved-validate-email-with-if-statements/197380
+
+  - Code sourced or guidance taken from geeks for geeks:
+    - Guidance for using flexbox to align divs side by side - https://www.geeksforgeeks.org/fluid-width-with-equally-spaced-div-using-css/
+
+  - Code sourced or guidance taken for creating the different functions to display the quiz question and choices:
+    - Micorsoft Bing - https://www.bing.com/search?q=how%20to%20use%20a%20loop%20with%20quiz%20questions%20in%20javascript%20so%20that%20only%20one%20question%20shows%20at%20a%20time&qs=n&form=QBRE&=Search%20%7B0%7D%20for%20%7B1%7D&=Search%20work%20for%20%7B0%7D&=%25eManage%20Your%20Search%20History%25E&sp=-1&ghc=1&lq=1&pq=how%20to%20use%20a%20loop%20with%20quiz%20questions%20in%20javascript%20so%20that%20only%20one%20question%20shows%20at%20a%20time&sc=1-93&sk=&cvid=4A54C3DD0B2548A197661244C781B20C&ghsh=0&ghacc=0&ghpl=
+                    - https://www.bing.com/search?q=how%20to%20use%20a%20loop%20with%20quiz%20questions%20in%20javascript%20so%20that%20only%20one%20question%20shows%20at%20a%20time&qs=n&form=QBRE&=Search%20%7B0%7D%20for%20%7B1%7D&=Search%20work%20for%20%7B0%7D&=%25eManage%20Your%20Search%20History%25E&sp=-1&ghc=1&lq=1&pq=how%20to%20use%20a%20loop%20with%20quiz%20questions%20in%20javascript%20so%20that%20only%20one%20question%20shows%20at%20a%20time&sc=1-93&sk=&cvid=4A54C3DD0B2548A197661244C781B20C&ghsh=0&ghacc=0&ghpl=
+
+    - Stackoverflow - https://stackoverflow.com/questions/62594459/how-to-check-the-correct-answer-javascript-4-buttons
+                    - https://stackoverflow.com/questions/15348725/how-to-make-quiz-questions-appear-one-at-a-time-in-javascript
+                    - https://stackoverflow.com/questions/68104582/asking-questions-using-arrays-and-loop
+
+    - envato tuts+ - https://webdesign.tutsplus.com/multiple-choice-quiz-app-with-javascript--cms-107756t
+
+    - sitepoint - https://www.sitepoint.com/simple-javascript-quiz/#thebasicstructureofyourjavascriptquiz 
+
 
 
 ### Media
