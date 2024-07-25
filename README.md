@@ -161,6 +161,8 @@
       - that the fonts and colors chosen throughout the game are easy to read and accessible.
       - that the buttons and input elements were accessible throughout the game.
 
+      ![screenshot of accessibility checker](media/lighthouse_main_contents.png)
+
 ## Bugs
 
 ### Fixed Bugs
@@ -170,6 +172,8 @@
     - Through using chrome DevTools I found the line of the function that the error derived from. I discovered this was due to an incorrect spelling of an Id name.
     - I changed this to correct spelling of the Id 'question'. 
     - Correcting the spelling fixed the problem.
+
+    ![screenshot of question.question error](media/question.question.png)
   
   - Game not restarting or refreshing:
     - When running the game, exiting the game and re-entering the game, I found it continued from the question in the game I had left it on. Also, once completing the game, navigating back to home and then re-loading the game, the game did not restart, it displayed the last question with the last choice selected.
