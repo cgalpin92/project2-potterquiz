@@ -31,6 +31,8 @@ main {
 footer {
     background-color: black;
     color: whitesmoke;
+    display: flex;
+    justify-content: space-evenly;
 }
 
 h1 {
@@ -140,7 +142,11 @@ label {
 }*/
 
 /* footer styling */
-
+.total-score {
+    font-size: 75%;
+    padding-bottom: 3%;
+    display: flex;
+}
 
 /* media querys */
 
