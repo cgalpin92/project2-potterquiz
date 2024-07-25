@@ -211,7 +211,7 @@ The live link can be found here - https://cgalpin92.github.io/project2-potterqui
 
   - Code sourced or guidance taken from SheCodes:
     - Targetting a button selection - https://www.shecodes.io/athena/7288-how-to-target-only-one-button-while-writing-in-javascript#:~:text=In%20JavaScript%2C%20you%20can%20use,through%20the%20addEventListener()%20method.&text=This%20attaches%20the%20function%20to,in%20the%20myFunction()%20body.
-    - For placing the value from an input into a heading element - https://www.shecodes.io/athena/5824-how-to-change-h1-to-the-user-name-submitted-in-search-engine
+    - For replacing the form with the entered username - https://www.shecodes.io/athena/5824-how-to-change-h1-to-the-user-name-submitted-in-search-engine
     - Placing functions within functions - https://www.shecodes.io/athena/1697-can-i-place-a-function-in-another-function-in-javascript#:~:text=Yes%2C%20a%20function%20can%20be,function%20and%20example%20code%20provided.
 
   - Code sourced or guidance taken from w3 schools
@@ -248,6 +248,12 @@ The live link can be found here - https://cgalpin92.github.io/project2-potterqui
 
 
 ### Media
+
+  - All profile pictures were taken from Harry Potter Fanzone:
+
+    - Harry Potter Profile Picture - https://www.harrypotterfanzone.com/pictures/harry-potter-order-of-the-phoenix-portrait-17/
+    - Ron Weasley Profile Picture - https://www.harrypotterfanzone.com/pictures/ron-weasley-half-blood-prince-portrait-2/
+    - Hermione Granger Profile Picture - https://www.harrypotterfanzone.com/pictures/hermione-granger-half-blood-prince-portrait-5/
 
 
 
