@@ -211,9 +211,11 @@ function createUsername(selected) {
 
 
 function hideMainContent() {
+    let welcome = document.getElementById('welcome');
     let harry = document.getElementById('harry');
     let ron = document.getElementById('ron');
     let hermione = document.getElementById('hermione');
+    welcome.style.display = "none";
     harry.style.display = "none";
     ron.style.display = "none";
     hermione.style.display = "none";
