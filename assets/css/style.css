@@ -84,8 +84,12 @@ img {
 
 /*main styling */
 
-#welcome-message {
+#welcome-title {
     font-size: 150%;
+}
+
+#welcome-message {
+    font-size: 130%;
 }
 
 .start-btn {
