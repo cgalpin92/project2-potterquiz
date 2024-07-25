@@ -96,6 +96,10 @@ img {
     font-size: 130%;
 }
 
+li {
+    padding: 3%;
+}
+
 .start-btn {
     display: flex;
     justify-content: center;
