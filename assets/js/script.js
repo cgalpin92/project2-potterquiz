@@ -293,6 +293,11 @@ function runGameOne() {
     displayHarryQuestion();
 }
 
+function removeQuestionHeading() {
+    let questionHeading = document.getElementById('question');
+    questionHeading.remove();
+}
+
 function displayHarryQuestion() {
 
     //places the question and choices in the correct locations within quiz area and assigns them a variable
@@ -552,6 +557,7 @@ function runHermioneGame() {
 function home() {
     displayMainContent();
     hideQuizArea();
+    removeQuestionHeading();
     removeScoreCard();
     resetScore();
     currentQuestion = 0;
