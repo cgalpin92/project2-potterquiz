@@ -341,12 +341,16 @@ function checkHarryAnswer(choice) {
 function nextQuestionOne() {
     let username = document.getElementById('username').value;
     console.log('username: ', username);
-    let totalScore = document.getElementById('correct').textContent;
+    let finalScore = document.getElementById('correct').textContent;
+    let totalScore = document.getElementById('total-score-one');
     currentQuestion++
     if (currentQuestion < harryQuestions.length) {
         displayHarryQuestion();
     } else {
-        alert(`Quiz complete!! Well done ${username}, you got ${totalScore} out of 10 correct. Return to Home Page and either replay this quiz to try and beat your score, or why not try testing your knowledge on Ron and Hermione`);
+        alert(`Quiz complete!! Well done ${username}, you got ${finalScore} out of 10 correct. Return to Home Page and either replay this quiz to try and beat your score, or why not try testing your knowledge on Ron and Hermione`);
+        let totalScoreNumber = document.createElement('h3');
+        totalScore.appendChild(totalScoreNumber);
+        totalScoreNumber.textContent = finalScore;
         currentQuestion = 0;
     }
 };
