@@ -470,13 +470,13 @@ function nextQuestionTwo() {
         displayRonQuestion();
     } else if (finalScore === "0") {
         alert(`Quiz complete!! Sorry ${username} you got 0 correct answers. Return to the Home Page and either replay this quiz to try and beat your score, or why not try testing your knowledge on Harry and Hermione?`);
-        totalScore.appendChild(totalScoreNumber);
-        totalScoreNumber.textContent = finalScore;
+        totalScore.appendChild(totalScoreNumberTwo);
+        totalScoreNumberTwo.textContent = finalScore;
         currentQuestion = 0;
     } else if (finalScore === "10") {
         alert(`Quiz complete!! Well done ${username}, you got ${finalScore} out of 10 correct. You know your Potter facts! Return to Home Page and try testing your knowledge on Harry and Hermione?`);
-        totalScore.appendChild(totalScoreNumber);
-        totalScoreNumber.textContent = finalScore;
+        totalScore.appendChild(totalScoreNumberTwo);
+        totalScoreNumberTwo.textContent = finalScore;
         currentQuestion = 0;
     } else {
         alert(`Quiz complete!! Well done ${username}, you got ${finalScore} out of 10 correct. Return to Home Page and either replay this quiz to try and beat your score, or why not try testing your knowledge on Harry and Hermione?`);
@@ -565,13 +565,13 @@ function nextQuestionThree() {
         displayHermioneQuestion();
     } else if (finalScore === "0") {
         alert(`Quiz complete!! Sorry ${username} you got 0 correct answers. Return to the Home Page and either replay this quiz to try and beat your score, or why not try testing your knowledge on Harry and Ron?`);
-        totalScore.appendChild(totalScoreNumber);
-        totalScoreNumber.textContent = finalScore;
+        totalScore.appendChild(totalScoreNumberThree);
+        totalScoreNumberThree.textContent = finalScore;
         currentQuestion = 0;
     } else if (finalScore === "10") {
         alert(`Quiz complete!! Well done ${username}, you got ${finalScore} out of 10 correct. You know your Potter facts! Return to Home Page and try testing your knowledge on Harry and Ron?`);
-        totalScore.appendChild(totalScoreNumber);
-        totalScoreNumber.textContent = finalScore;
+        totalScore.appendChild(totalScoreNumberThree);
+        totalScoreNumberThree.textContent = finalScore;
         currentQuestion = 0;
     } else {
         alert(`Quiz complete!! Well done ${username}, you got ${finalScore} out of 10 correct. Return to Home Page and either replay this quiz to try and beat your score, or why not try testing your knowledge on Harry and Ron?`);
