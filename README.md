@@ -71,11 +71,13 @@
 ### Features Left to Implement
 
   - Further quiz games under the following categories;
-    - Other Harry Potter characters
-    - To sort the user into a Hogwarts House depending on the answers they choose
-  - Further levels for each game so that the user can progress further
-  - Create a timer feature to set a limit on how long the user has to complete the quiz
-  - Animation on the home screen when the user firsts accesses the site
+    - Other Harry Potter characters.
+    - To sort the user into a Hogwarts House depending on the answers they choose.
+  - Further levels for each game so that the user can progress further.
+  - Create a timer feature to set a limit on how long the user has to complete the quiz.
+  - Animation on the home screen when the user firsts accesses the site.
+  - The user is informed of the correct answers when selecting an incorrect answer in the game.
+  - Receive a total score after completeting all 3 games.
 
 
 
