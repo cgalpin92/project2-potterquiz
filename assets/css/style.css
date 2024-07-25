@@ -104,7 +104,6 @@ li {
 .start-btn {
     display: flex;
     justify-content: center;
-    -webkit-appearance: none;
 }
 
 label {
@@ -218,6 +217,7 @@ label {
 
     .start-btn {
         margin-top: 6%;
+        margin-bottom: 3%;
     }
 
     #answer-choices {
@@ -238,6 +238,41 @@ label {
     }
 }
 
-@media screen and (min-width: 1200px) {}
+@media screen and (min-width: 1200px) {
+    img {
+        height: 330px;
+        width: 245px;
+    }
 
-@media screen and (min-width: 1400px) {}
+    .total-score {
+        font-size: 100%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+
+    h2 {
+        padding-top: 5%;
+        padding-bottom: 2%;
+    }
+
+    #welcome-title {
+        font-size: 260%;
+    }
+
+    #welcome-message {
+        font-size: 145%;
+    }
+
+    li {
+        font-size: 145%;
+    }
+
+    #username-field {
+        font-size: 200%;
+    }
+
+    #answer-choices {
+        margin: 1% 20%;
+    }
+}
