@@ -187,6 +187,12 @@ let correctAnswers = document.createElement('p');
 
 let incorrectAnswers = document.createElement('p');
 
+let totalScoreNumber = document.createElement('h3');
+
+let totalScoreNumberTwo = document.createElement('h3');
+
+let totalScoreNumberThree = document.createElement('h3');
+
 //functions
 
 function createUsername(selected) {
@@ -290,6 +296,7 @@ function runGameOne() {
     let questionHeading = document.createElement('h3');
     questionHeading.setAttribute('id', 'question');
     questionDiv.appendChild(questionHeading);
+    totalScoreNumber.textContent = "0";
     displayHarryQuestion();
 }
 
@@ -359,7 +366,7 @@ function nextQuestionOne() {
         displayHarryQuestion();
     } else {
         alert(`Quiz complete!! Well done ${username}, you got ${finalScore} out of 10 correct. Return to Home Page and either replay this quiz to try and beat your score, or why not try testing your knowledge on Ron and Hermione`);
-        let totalScoreNumber = document.createElement('h3');
+
         totalScore.appendChild(totalScoreNumber);
         totalScoreNumber.textContent = finalScore;
         currentQuestion = 0;
@@ -385,6 +392,7 @@ function runGameTwo() {
     let questionHeading = document.createElement('h3');
     questionHeading.setAttribute('id', 'question');
     questionDiv.appendChild(questionHeading);
+    totalScoreNumberTwo.textContent = "0";
     displayRonQuestion();
 }
 
@@ -442,6 +450,7 @@ function checkRonAnswer(choice) {
     nextQuestionTwo();
 };
 
+
 function nextQuestionTwo() {
     let username = document.getElementById('username').value;
     let finalScore = document.getElementById('correct').textContent;
@@ -451,9 +460,9 @@ function nextQuestionTwo() {
         displayRonQuestion();
     } else {
         alert(`Quiz complete!! Well done ${username}, you got ${finalScore} out of 10 correct. Return to Home Page and either replay this quiz to try and beat your score, or why not try testing your knowledge on Harry and Hermione?`);
-        let totalScoreNumber = document.createElement('h3');
-        totalScore.appendChild(totalScoreNumber);
-        totalScoreNumber.textContent = finalScore;
+
+        totalScore.appendChild(totalScoreNumberTwo);
+        totalScoreNumberTwo.textContent = finalScore;
         currentQuestion = 0;
     }
 };
@@ -477,6 +486,7 @@ function runGameThree() {
     let questionHeading = document.createElement('h3');
     questionHeading.setAttribute('id', 'question');
     questionDiv.appendChild(questionHeading);
+    totalScoreNumberThree.textContent = "0";
     displayHermioneQuestion();
 }
 
@@ -525,6 +535,7 @@ function checkHermioneAnswer(choice) {
     nextQuestionThree();
 };
 
+
 function nextQuestionThree() {
     let username = document.getElementById('username').value;
     let finalScore = document.getElementById('correct').textContent;
@@ -535,9 +546,9 @@ function nextQuestionThree() {
         displayHermioneQuestion();
     } else {
         alert(`Quiz complete!! Well done ${username}, you got ${finalScore} out of 10 correct. Return to Home Page and either replay this quiz to try and beat your score, or why not try testing your knowledge on Harry and Ron?`);
-        let totalScoreNumber = document.createElement('h3');
-        totalScore.appendChild(totalScoreNumber);
-        totalScoreNumber.textContent = finalScore;
+
+        totalScore.appendChild(totalScoreNumberThree);
+        totalScoreNumberThree.textContent = finalScore;
         currentQuestion = 0;
     }
 };
