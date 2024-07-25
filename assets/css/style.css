@@ -67,7 +67,9 @@ button {
     margin: 3%;
     font-size: 155%;
     font-family: 'Julius Sans One', sans-serif;
+    color: black;
     font-weight: bolder;
+    background-color: whitesmoke;
     box-shadow: 1px 1px 7px darkred;
 
 }
