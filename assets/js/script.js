@@ -190,26 +190,22 @@ let incorrectAnswers = document.createElement('p');
 //functions
 
 function createUsername(selected) {
-    document.querySelector('form').addEventListener('submit', (e) => {
-        e.preventDefault();
-        //formValidation();
-        let userName = document.getElementById('username').value;
-        let usernameField = document.createElement('h2');
-        usernameField.setAttribute('id', 'username-field');
-        usernameField.textContent = `Hello, ${userName}`;
-        let usernameOutput = document.getElementById('username-output');
-        usernameOutput.appendChild(usernameField);
-
-    })
-    let userNameInput = document.getElementById('username-input');
-    userNameInput.style.display = "none";
-};
-
-function formValidation() {
     let valueCheck = document.getElementById('username').value;
-    if (valueCheck === "") {
-        alert('You must create a username before proceeding');
+    if (valueCheck >= 0) {
+        alert('You must create a valid username before proceeding');
+    } else {
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            let userName = document.getElementById('username').value;
+            let usernameField = document.createElement('h2');
+            usernameField.setAttribute('id', 'username-field');
+            usernameField.textContent = `Hello, ${userName}`;
+            let usernameOutput = document.getElementById('username-output');
+            usernameOutput.appendChild(usernameField);
 
+        })
+        let userNameInput = document.getElementById('username-input');
+        userNameInput.style.display = "none";
     }
 };
 
