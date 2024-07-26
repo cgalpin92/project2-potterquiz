@@ -106,7 +106,6 @@ let ronQuestions = [{
 
 ];
 
-
 let hermioneQuestions = [{
         question: "What is Hermione's first line in the first movie?",
         choices: ["Has anyone seen a toad?", "Oh, are you doing magic?", "You've got dirt on your nose, by the way", "I'm Hermione Granger"],
@@ -160,7 +159,6 @@ let hermioneQuestions = [{
 
 ];
 
-
 let gameArea = document.getElementById('game-area');
 
 let mainContent = document.getElementById('main-content');
@@ -169,7 +167,7 @@ let quizArea = document.getElementById('quiz-area');
 
 let btnOne = document.createElement('BUTTON');
 
-let btnTwo = document.createElement('BUTTON');
+//let btnTwo = document.createElement('BUTTON');
 
 let currentQuestion = 0;
 
@@ -194,7 +192,6 @@ let totalScoreNumberTwo = document.createElement('h3');
 let totalScoreNumberThree = document.createElement('h3');
 
 //functions
-
 function createUsername(selected) {
     let valueCheck = document.getElementById('username').value;
     if (valueCheck >= 0) {
@@ -208,13 +205,11 @@ function createUsername(selected) {
             usernameField.textContent = `Hello, ${userName}`;
             let usernameOutput = document.getElementById('username-output');
             usernameOutput.appendChild(usernameField);
-
         })
         let userNameInput = document.getElementById('username-input');
         userNameInput.style.display = "none";
     }
 };
-
 
 function hideMainContent() {
     let welcome = document.getElementById('welcome');
@@ -227,8 +222,6 @@ function hideMainContent() {
     hermione.style.display = "none";
 };
 
-
-
 function displayMainContent() {
     let welcome = document.getElementById('welcome');
     let harry = document.getElementById('harry');
@@ -239,7 +232,6 @@ function displayMainContent() {
     ron.style.display = "block";
     hermione.style.display = "block";
 };
-
 
 function scoreCard() {
     scoreBoard.setAttribute('id', 'scoreBoard');
@@ -306,18 +298,10 @@ function removeQuestionHeading() {
 }
 
 function displayHarryQuestion() {
-
-    //places the question and choices in the correct locations within quiz area and assigns them a variable
-
     let questionElement = document.getElementById("question");
     let choicesElement = document.getElementById("answer-choices");
-
-    //fetches the current question from harryQuestion variable and places it in a variable
     let displayQuestion = harryQuestions[currentQuestion];
-
     questionElement.textContent = displayQuestion.question;
-
-    //create choices    
     choicesElement.innerHTML = "";
     displayQuestion.choices.forEach((choice, index) => {
         let input = document.createElement('BUTTON');
@@ -327,25 +311,14 @@ function displayHarryQuestion() {
         input.addEventListener('click', () => checkHarryAnswer(choice));
         choicesElement.appendChild(input);
     });
-
-    // btnOne.setAttribute('onclick', 'nextQuestionOne();');
-    //btnOne.textContent = "Next";
     scoreCard();
-    console.log('correct answer: ', correctAnswers.value);
-    console.log('incorrect answer: ', incorrectAnswers.value);
-    btnTwo.setAttribute('onclick', 'home();');
-    btnTwo.textContent = "home";
-    //quizArea.appendChild(btnOne);
-    quizArea.appendChild(btnTwo);
-
+    btnOne.setAttribute('onclick', 'home();');
+    btnOne.textContent = "home";
+    quizArea.appendChild(btnOne);
 };
 
-
-
 function checkHarryAnswer(choice) {
-    console.log('choice: ', choice);
     let correct = harryQuestions[currentQuestion].correct;
-    console.log('correct: ', correct);
     if (choice === correct) {
         alert('correct'), addScore();
     } else {
@@ -354,11 +327,8 @@ function checkHarryAnswer(choice) {
     nextQuestionOne();
 };
 
-
-
 function nextQuestionOne() {
     let username = document.getElementById('username').value;
-    console.log('username: ', username);
     let finalScore = document.getElementById('correct').textContent;
     let totalScore = document.getElementById('total-score-one');
     currentQuestion++
@@ -376,14 +346,11 @@ function nextQuestionOne() {
         currentQuestion = 0;
     } else {
         alert(`Quiz complete!! Well done ${username}, you got ${finalScore} out of 10 correct. Return to Home Page and either replay this quiz to try and beat your score, or why not try testing your knowledge on Ron and Hermione`);
-
         totalScore.appendChild(totalScoreNumber);
         totalScoreNumber.textContent = finalScore;
         currentQuestion = 0;
     }
 };
-
-
 
 function runHarryGame() {
     let valueCheck = document.getElementById('username').value;
@@ -393,7 +360,6 @@ function runHarryGame() {
         hideMainContent();
         displayQuizArea();
         runGameOne();
-        //displayHarryQuestion();
     }
 };
 
@@ -407,20 +373,10 @@ function runGameTwo() {
 }
 
 function displayRonQuestion() {
-
-    //places the question and choices in the correct locations within quiz area and assigns them a variable
-
     let questionElement = document.getElementById("question");
     let choicesElement = document.getElementById("answer-choices");
-
-    //fetches the current question from harryQuestion variable and places it in a variable
-    console.log('ronQuestions: ', ronQuestions);
-    console.log('currentQuestion: ', currentQuestion);
     let displayQuestion = ronQuestions[currentQuestion];
-    console.log('displayQuestion', displayQuestion);
     questionElement.textContent = displayQuestion.question;
-
-    //create choices    
     choicesElement.innerHTML = "";
     displayQuestion.choices.forEach((choice, index) => {
         let input = document.createElement('BUTTON');
@@ -431,27 +387,14 @@ function displayRonQuestion() {
         input.addEventListener('click', () => checkRonAnswer(choice));
         choicesElement.appendChild(input);
     });
-
-    //btnOne.setAttribute('onclick', 'nextQuestionTwo();');
-    //btnOne.textContent = "Next";
     scoreCard();
-    btnTwo.setAttribute('onclick', 'home();');
-    btnTwo.textContent = "home";
-    quizArea.appendChild(btnTwo);
-    //quizArea.appendChild(btnOne);
-
+    btnOne.setAttribute('onclick', 'home();');
+    btnOne.textContent = "home";
+    quizArea.appendChild(btnOne);
 };
 
 function checkRonAnswer(choice) {
-    //let choices = ronQuestions[currentQuestion].choices;
-    //console.log('choices: ', choices);
-    //let displayQuestion = ronQuestions[currentQuestion];
-    //console.log('displayQuestion: ', displayQuestion);
-    //let value = ronQuestions[currentQuestion].choices.index;
-    //console.log('value: ', value);
-    console.log('choice: ', choice);
     let correct = ronQuestions[currentQuestion].correct;
-    console.log('correct: ', correct);
     if (choice === correct) {
         alert('correct'), addScore();;
     } else {
@@ -459,7 +402,6 @@ function checkRonAnswer(choice) {
     }
     nextQuestionTwo();
 };
-
 
 function nextQuestionTwo() {
     let username = document.getElementById('username').value;
@@ -486,8 +428,6 @@ function nextQuestionTwo() {
     }
 };
 
-
-
 function runRonGame() {
     let valueCheck = document.getElementById('username').value;
     if (valueCheck === "") {
@@ -496,7 +436,6 @@ function runRonGame() {
         hideMainContent();
         displayQuizArea();
         runGameTwo();
-        //displayRonQuestion();
     }
 };
 
@@ -510,18 +449,10 @@ function runGameThree() {
 }
 
 function displayHermioneQuestion() {
-
-    //places the question and choices in the correct locations within quiz area and assigns them a variable
-
     let questionElement = document.getElementById("question");
     let choicesElement = document.getElementById("answer-choices");
-
-    //fetches the current question from harryQuestion variable and places it in a variable
     let displayQuestion = hermioneQuestions[currentQuestion];
-
     questionElement.textContent = displayQuestion.question;
-
-    //create choices    
     choicesElement.innerHTML = "";
     displayQuestion.choices.forEach((choice, index) => {
         let input = document.createElement('BUTTON');
@@ -531,21 +462,14 @@ function displayHermioneQuestion() {
         input.addEventListener('click', () => checkHermioneAnswer(choice));
         choicesElement.appendChild(input);
     });
-
-    //btnOne.setAttribute('onclick', 'nextQuestionThree();');
-    //btnOne.textContent = "Next";
     scoreCard();
-    btnTwo.setAttribute('onclick', 'home();');
-    btnTwo.textContent = "home";
-    //quizArea.appendChild(btnOne);
-    quizArea.appendChild(btnTwo);
-
+    btnOne.setAttribute('onclick', 'home();');
+    btnOne.textContent = "home";
+    quizArea.appendChild(btnOne);
 };
 
 function checkHermioneAnswer(choice) {
-    console.log('choice: ', choice);
     let correct = hermioneQuestions[currentQuestion].correct;
-    console.log('correct: ', correct);
     if (choice === correct) {
         alert('correct'), addScore();;
     } else {
@@ -554,12 +478,10 @@ function checkHermioneAnswer(choice) {
     nextQuestionThree();
 };
 
-
 function nextQuestionThree() {
     let username = document.getElementById('username').value;
     let finalScore = document.getElementById('correct').textContent;
-    let totalScore = document.getElementById('total-score-three');
-    console.log('total score: '.totalScore);
+    let totalScore = document.getElementById('total-score-three')
     currentQuestion++
     if (currentQuestion < hermioneQuestions.length) {
         displayHermioneQuestion();
@@ -589,7 +511,6 @@ function runHermioneGame() {
         hideMainContent();
         displayQuizArea();
         runGameThree();
-        //displayHermioneQuestion();
     }
 };
 
