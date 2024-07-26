@@ -92,7 +92,7 @@ This game is targeted at Harry Potter fans of all ages.
 
 - __Footer__
 
-  - The aim of this section is showcase the total score of each game once each game has completed.
+  - The aim of this section is showcase the total score of each game once each game is complete.
   - The background is black with white font to mimic the Header of the game and make the text clear for the player to read.
   - If the player attempts a game again and receives a new score, the corresponding total score will be replaced with the new score.
 
