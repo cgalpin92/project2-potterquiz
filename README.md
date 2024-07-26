@@ -1,10 +1,12 @@
 # Potter Quiz
 
 ## Intro
+The Potter Quiz game is for Harry Potter fans to test their knowledge on the three main characters; Harry Potter, Ron Weasley, Hermione Granger.
+The website consists of three games for each of the characters. The player can replay these games to try and beat their scores as many times as they wish.
 
-![Responsice Mockup](media/potter-quiz-mockup.png) 
+  ![Responsice Mockup](media/potter-quiz-mockup.png) 
 
-![Second Responsice Mockup](media/potter-quiz-mockup-two.png)
+  ![Second Responsice Mockup](media/potter-quiz-mockup-two.png)
 
 ## User Experience Stories
 
@@ -23,7 +25,7 @@
 
 - __Typography__
  - The fonts Philosopher and Julius Sans One are used for the Header and h2 headers throughout the game to keep consistency. They are clear and fit with the Harry Potter magic theme.
- - The font Cormorant Garamond is used for the remaining text. This is also clear text and fits with the Harry Potter Theme, closely resembling the font used for the text within the Harry Potter books.
+ - The font Cormorant Garamond is used for the remaining text. This is also clear text and fits with the Harry Potter theme, closely resembling the font used for the text within the Harry Potter books.
  - The font sans-serif is set as the fallback for all fonts in the instance the browser does not import the fonts correctly.
 
 ## Features 
@@ -33,11 +35,11 @@
 
 - __Header__
   
-  - The Header encompasses the Title of the Game. It located at the top of the page with the Title centered.
+  - The Header encompasses the title of the game. It located at the top of the page with the title centered.
   - The Header has a black background with white smoke font which which is clear and stands out to the user. 
   - The font is capitalized to clearly identify to the user its the title of the game. 
 
-  ![screenshot of header on main page](media/header.png)
+  ![screenshot of the header](media/header.png)
 
 - __Welcome Section__
 
@@ -54,8 +56,8 @@
   - This section is located at the top of the page before the user reaches the game itself. 
   - The player is also unable to enter a blank value within the username field, if they attempt to do this an alert will appear once Create is selected informing the player they are required to enter a valid username.
 
-![screenshot of Username Section](media/create_username.png)
-![screenshot of Username Section after username has been created](media/username-created.png)  
+  ![screenshot of Username Section](media/create_username.png)
+  ![screenshot of Username Section after username has been created](media/username-created.png)  
 
 - __Game Area__
 
@@ -78,7 +80,7 @@
       - A question for the player.
       - 4 answer choices in the form of buttons. These are either stacked vertically on smaller screens or horizontally on larger screens.
       - A home button for the player to return to the Main Contents.
-      - A score board labelled with 'Correct' and 'Incorrect'. The relative label will increment after each question depending on if the user selects the correct or incorrect answer. If the player replays the game the score for both 'Correct' and 'Incorrect' will reset to 0.
+      - A score board labelled with 'Correct' and 'Incorrect'. The value of the relative label will increase after each question depending on if the user selects the correct or incorrect answer. If the player replays the game the score for both 'Correct' and 'Incorrect' will reset to 0.
     - All font within the Quiz Area is black on white background which is clear for the user.
     - If the player exists the game and selects 'Begin Quiz' again the game resets back to the start and the user starts the game again.
 
@@ -92,8 +94,8 @@
   - The background is black with white font to mimic the Header of the game and make the text clear for the user to read.
   - If the player attempts a game again and receives a new score, the corresponding total score will be replaced with the new score.
 
-![screenshot of Footer](media/footer.png)
-![screenshot of Footer with total scores](media/footer_two.png)
+  ![screenshot of Footer](media/footer.png)
+  ![screenshot of Footer with total scores](media/footer_two.png)
 
 ### Features Left to Implement
 
@@ -104,10 +106,7 @@
   - Create a timer feature to set a limit on how long the user has to complete the quiz.
   - Animation on the home screen when the user firsts accesses the site.
   - The user is informed of the correct answers when selecting an incorrect answer in the game.
-  - Receive a final score which is a combination of all 3 total scores after completeting all 3 games.
-
-  ![screenshot of Wwlcome Section]
-
+  - Receive a final score which is a combination of all 3 total scores after completing all 3 games.
 
 
 ## Testing 
@@ -149,26 +148,29 @@
 
   - __HTML__
     - No errors were returned when passing HTML code from index.html through the official W3C validator.
-    ![screenshot of W3C validator No Errors Returned](media/html_w3c_validator.png)
+
+      ![screenshot of W3C validator No Errors Returned](media/html_w3c_validator.png)
 
   - __CSS__
     - No errors were returned when passing through the official (Jigsaw) validator.
-    ![screenshot of Jigsaw Validator No Errors Returned](media/css_jigsaw_validator.png)
+
+      ![screenshot of Jigsaw Validator No Errors Returned](media/css_jigsaw_validator.png)
 
 
   - __JavaScript__
     - Have run the javascript code through jshint.
     - Warnings have appeared but no errors.
-    - The warnings have stated that the variables and syntaxes used are only available in ES6. I do not believe any action is required here as it not affecting the running of my code
+    - The warnings have stated that the variables and syntaxes used are only available in ES6. I do not believe any action is required here as it is not affecting the running of my code
     - The warnings have also stated unnecessary semicolons - these have been at the end of functions.
     - I have decided to leave them in because it does not affect the running of my code.
-    ![screenshot of jshint validator warnings](media/jshint.png)
+
+      ![screenshot of jshint validator warnings](media/jshint.png)
 
 
   - __Accessibility__
     - By running the game through lighthouse in Chrome DevTools I was able to confirm:
-      - that the fonts and colors chosen throughout the game are easy to read and accessible.
-      - that the buttons and input elements were accessible throughout the game.
+      - The fonts and colors chosen throughout the game are easy to read and accessible.
+      - The buttons and input elements were accessible throughout the game.
 
       ![screenshot of accessibility checker](media/lighthouse_main_contents.png)
 
@@ -187,28 +189,28 @@
   - Game not restarting or refreshing:
     - When running the game, exiting the game and re-entering the game, I found it continued from the question in the game I had left it on. Also, once completing the game, navigating back to home and then re-loading the game, the game did not restart, it displayed the last question with the last choice selected.
     - Through the use of console.logs I discovered that the current question index was not reverting back to 0.
-    - Added the following line of code to the end of the function calling the next question 'currentQuestion = 0' so that once the final question had been called, the question index would revert back to 0 and the first question would be called again. I then added the same line of code to the end of the function used to navigate back to the home screen, so that if called because the player decided to leave the game early, it would set the current question index back to 0, and when navigating back to the game the first question would be called again.
-    - Adding this same line of code to the two seperate functions resolved the issue.
+    - Added the following line of code to the end of the function calling the next question 'currentQuestion = 0' so that once the final question had been called, the question index would revert to 0 and the first question would be called again. I then added the same line of code to the end of the function used to navigate back to the home screen, so that if called because the player decided to leave the game early, it would set the current question index back to 0, and when navigating back to the game the first question would be called again.
+    - Adding this same line of code to the two separate functions resolved the issue.
   
   - duplication of score cards:
     - I found that each time the Begin Quiz function was called an additional h3 element was being added to the score card.
     - This was due to a part of the function to display the questions which creates the h3 element to display the score number. Each time the function was called it was creating another h3 element.
-    - I resolved this through creating a function which removes the h3 element when the game is ended and the player navigates back to home. 
+    - I resolved this through creating a function which removes the h3 element when the game has ended and the player navigates back to home. 
   
   - default button settings on mobile devices:
-    - When testing the quiz on a mobile device I found that the button styles I had applied using CSS were not displaying. Instead the default browser button styles were showing.
+    - When testing the quiz on a mobile device I found that the button styles I had applied using CSS were not displaying. Instead, the default browser button styles were showing.
     - I searched online for some potential solutions and attempted to resolve by adding -webkit-appearance: none to the button styling within CSS. The buttons were still showing in their default styling.
     - I realised I had not set a background color or font color for the buttons. Applied this to all buttons and the styling I had applied within the CSS file was now showing on mobile devices. This resolved the issue.
   
   - Score card not resetting when starting a new game:
-    - Found that when restarting a game the correct and incorrect scores were not resetting. Instead they continued to update.
-    - Created a function 'resetScore' to update the input for correct and incorrect score to 0, and applied this function to the home function so that when leaving the game the scores reset.
+    - Found that when restarting a game, the correct and incorrect scores were not resetting. Instead, they continued to update.
+    - Created a function 'resetScore' to update the input for correct and incorrect score to 0, and applied this function to the home function so that when leaving the game, the scores reset.
   
   - Extra space being created after each question:
     - When running through the questions in each game, space between the question and the heading displaying the username was increasing.
     - Through chrome DevTools I noticed these were blank h3 elements.
-    - Through checking the display question function I found this was due to part of the function creating the heading to display the question, each time the display question function was run it was creating a new h3 element below the last.
-    - Resolved this through creating a seperate function to create the h3 element, and then calling the display question function within the new function. This resolved the issue of duplicate h3 elements being created.
+    - Through checking the display question function, I found this was due to part of the function creating the heading to display the question, each time the display question function was run it was creating a new h3 element below the last.
+    - Resolved this through creating a separate function to create the h3 element, and then calling the display question function within the new function. This resolved the issue of duplicate h3 elements being created.
 
   - Total score not resetting after each run of the game:
     - Found that the total score displayed in the footer was not resetting to 0 if a game was replayed.
