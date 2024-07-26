@@ -190,6 +190,8 @@ let correctAnswers = document.createElement('p');
 let incorrectAnswers = document.createElement('p');
 
 //functions
+
+//function to create username
 function createUsername(selected) {
     let valueCheck = document.getElementById('username').value;
     if (valueCheck >= 0) {
@@ -209,6 +211,7 @@ function createUsername(selected) {
     }
 };
 
+//function to hide main content when a game is started
 function hideMainContent() {
     const welcome = document.getElementById('welcome');
     const harry = document.getElementById('harry');
@@ -220,6 +223,7 @@ function hideMainContent() {
     hermione.style.display = "none";
 };
 
+//function to display main content when game is exited
 function displayMainContent() {
     const welcome = document.getElementById('welcome');
     const harry = document.getElementById('harry');
@@ -231,6 +235,7 @@ function displayMainContent() {
     hermione.style.display = "block";
 };
 
+// function to create html structure for the score card
 function scoreCard() {
     scoreBoard.setAttribute('id', 'scoreBoard');
     quizArea.appendChild(scoreBoard);
@@ -246,6 +251,7 @@ function scoreCard() {
     scoreTitleTwo.appendChild(incorrectAnswers);
 };
 
+// function to remove the score card when the came is exited so that when a new game starts there are no duplicate score cards
 function removeScoreCard() {
     scoreBoard.remove();
     scoreTitle.remove();
