@@ -1,6 +1,6 @@
 //Global Variables
 
-let harryQuestions = [{
+const harryQuestions = [{
         question: "What house does Harry belong to?",
         choices: ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"],
         correct: "Gryffindor"
@@ -53,7 +53,7 @@ let harryQuestions = [{
 
 ];
 
-let ronQuestions = [{
+const ronQuestions = [{
         question: "What is the name of the Weasley family home?",
         choices: ["Number 12 Grimmauld Place", "Little Whinging", "The Burrow", "Godric's Hollow"],
         correct: "The Burrow"
@@ -106,7 +106,7 @@ let ronQuestions = [{
 
 ];
 
-let hermioneQuestions = [{
+const hermioneQuestions = [{
         question: "What is Hermione's first line in the first movie?",
         choices: ["Has anyone seen a toad?", "Oh, are you doing magic?", "You've got dirt on your nose, by the way", "I'm Hermione Granger"],
         correct: "Has anyone seen a toad?"
@@ -159,15 +159,19 @@ let hermioneQuestions = [{
 
 ];
 
-let gameArea = document.getElementById('game-area');
+const gameArea = document.getElementById('game-area');
 
-let mainContent = document.getElementById('main-content');
+const mainContent = document.getElementById('main-content');
+
+const btnOne = document.createElement('BUTTON');
+
+const totalScoreNumber = document.createElement('h3');
+
+const totalScoreNumberTwo = document.createElement('h3');
+
+const totalScoreNumberThree = document.createElement('h3');
 
 let quizArea = document.getElementById('quiz-area');
-
-let btnOne = document.createElement('BUTTON');
-
-//let btnTwo = document.createElement('BUTTON');
 
 let currentQuestion = 0;
 
@@ -185,12 +189,6 @@ let correctAnswers = document.createElement('p');
 
 let incorrectAnswers = document.createElement('p');
 
-let totalScoreNumber = document.createElement('h3');
-
-let totalScoreNumberTwo = document.createElement('h3');
-
-let totalScoreNumberThree = document.createElement('h3');
-
 //functions
 function createUsername(selected) {
     let valueCheck = document.getElementById('username').value;
@@ -205,17 +203,17 @@ function createUsername(selected) {
             usernameField.textContent = `Hello, ${userName}`;
             let usernameOutput = document.getElementById('username-output');
             usernameOutput.appendChild(usernameField);
-        })
+        });
         let userNameInput = document.getElementById('username-input');
         userNameInput.style.display = "none";
     }
 };
 
 function hideMainContent() {
-    let welcome = document.getElementById('welcome');
-    let harry = document.getElementById('harry');
-    let ron = document.getElementById('ron');
-    let hermione = document.getElementById('hermione');
+    const welcome = document.getElementById('welcome');
+    const harry = document.getElementById('harry');
+    const ron = document.getElementById('ron');
+    const hermione = document.getElementById('hermione');
     welcome.style.display = "none";
     harry.style.display = "none";
     ron.style.display = "none";
@@ -223,10 +221,10 @@ function hideMainContent() {
 };
 
 function displayMainContent() {
-    let welcome = document.getElementById('welcome');
-    let harry = document.getElementById('harry');
-    let ron = document.getElementById('ron');
-    let hermione = document.getElementById('hermione');
+    const welcome = document.getElementById('welcome');
+    const harry = document.getElementById('harry');
+    const ron = document.getElementById('ron');
+    const hermione = document.getElementById('hermione');
     welcome.style.display = "block";
     harry.style.display = "block";
     ron.style.display = "block";
@@ -277,10 +275,10 @@ function displayQuizArea() {
 };
 
 function resetScore() {
-    correctScore = 0
+    correctScore = 0;
     correctAnswers.innerHTML = correctScore;
-    incorrectScore = 0
-    incorrectAnswers.innerHTML = correctScore
+    incorrectScore = 0;
+    incorrectAnswers.innerHTML = correctScore;
 };
 
 function runGameOne() {
@@ -331,7 +329,7 @@ function nextQuestionOne() {
     let username = document.getElementById('username').value;
     let finalScore = document.getElementById('correct').textContent;
     let totalScore = document.getElementById('total-score-one');
-    currentQuestion++
+    currentQuestion++;
     if (currentQuestion < harryQuestions.length) {
         displayHarryQuestion();
     } else if (finalScore === "0") {
@@ -382,7 +380,6 @@ function displayRonQuestion() {
         let input = document.createElement('BUTTON');
         input.value = "index";
         input.textContent = choice;
-        console.log('choice: ', choice)
         input.setAttribute('class', 'button-choices');
         input.addEventListener('click', () => checkRonAnswer(choice));
         choicesElement.appendChild(input);
@@ -407,7 +404,7 @@ function nextQuestionTwo() {
     let username = document.getElementById('username').value;
     let finalScore = document.getElementById('correct').textContent;
     let totalScore = document.getElementById('total-score-two');
-    currentQuestion++
+    currentQuestion++;
     if (currentQuestion < ronQuestions.length) {
         displayRonQuestion();
     } else if (finalScore === "0") {
@@ -481,8 +478,8 @@ function checkHermioneAnswer(choice) {
 function nextQuestionThree() {
     let username = document.getElementById('username').value;
     let finalScore = document.getElementById('correct').textContent;
-    let totalScore = document.getElementById('total-score-three')
-    currentQuestion++
+    let totalScore = document.getElementById('total-score-three');
+    currentQuestion++;
     if (currentQuestion < hermioneQuestions.length) {
         displayHermioneQuestion();
     } else if (finalScore === "0") {
