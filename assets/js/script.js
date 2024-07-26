@@ -399,6 +399,7 @@ function displayHarryQuestion() {
     //calls the scoreCard function and adds the home button to the bottom of the section
     scoreCard();
     btnOne.setAttribute('onclick', 'home();');
+    btnOne.setAttribute('aria-label', 'select to navigate back to the home screen');
     btnOne.textContent = "home";
     quizArea.appendChild(btnOne);
 };
@@ -516,6 +517,7 @@ function displayRonQuestion() {
     //calls the scoreCard function and adds the home button to the bottom of the section
     scoreCard();
     btnOne.setAttribute('onclick', 'home();');
+    btnOne.setAttribute('aria-label', 'select to navigate back to the home screen');
     btnOne.textContent = "home";
     quizArea.appendChild(btnOne);
 };
@@ -630,6 +632,7 @@ function displayHermioneQuestion() {
     //calls the scoreCard function and adds the home button to the bottom of the section
     scoreCard();
     btnOne.setAttribute('onclick', 'home();');
+    btnOne.setAttribute('aria-label', 'select to navigate back to the home screen');
     btnOne.textContent = "home";
     quizArea.appendChild(btnOne);
 };
