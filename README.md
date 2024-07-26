@@ -12,9 +12,9 @@ This game is targeted at Harry Potter fans of all ages.
 
 ## User Experience Stories
 
- - As a user I want to test my knowledge on the three main characters of Harry Potter.
- - As a user I want to understand how to play the game.
- - As a users I want to try and beat my score each time.
+ - As a user/player I want to test my knowledge on the three main characters of Harry Potter.
+ - As a user/player I want to understand how to play the game.
+ - As a user/player I want to try and beat my score each time.
 
 
 ## Design
@@ -38,14 +38,14 @@ This game is targeted at Harry Potter fans of all ages.
 - __Header__
   
   - The Header encompasses the title of the game. It located at the top of the page with the title centered.
-  - The Header has a black background with white smoke font which which is clear and stands out to the user. 
-  - The font is capitalized to clearly identify to the user its the title of the game. 
+  - The Header has a black background with white smoke font which which is clear and stands out to the player. 
+  - The font is capitalized to clearly identify to the player its the title of the game. 
 
   ![screenshot of the header](media/header.png)
 
 - __Welcome Section__
 
-  - The Welcome Section introduces the player to the game. It includes a How to Play section which talks the user through the steps to start the game. It also informs them they can play as many times as they wish to try and beat their previous score and that their final score from each attempt at a game will display at the bottom of the page.
+  - The Welcome Section introduces the player to the game. It includes a How to Play section which talks the player through the steps to start the game. It also informs them they can play as many times as they wish to try and beat their previous score and that their final score from each attempt at a game will display at the bottom of the page.
   - The font is black on a white smoke background which is clear for the player to read.
   - Its located before the Create Username section so that the player understands they are required to create a username to start playing.
 
@@ -53,9 +53,9 @@ This game is targeted at Harry Potter fans of all ages.
 
 - __Username Section__
 
-  - The Username section encompases a title asking the user to create a username, an input field for the user to enter a username and a button to create the username.
-  - The font is black on white background which is clear and stands out to the user.
-  - This section is located at the top of the page before the user reaches the game itself. 
+  - The Username section encompases a title asking the player to create a username, an input field for the player to enter a username and a button to create the username.
+  - The font is black on white background which is clear and stands out to the player.
+  - This section is located at the top of the page before the player reaches the game itself. 
   - The player is also unable to enter a blank value within the username field, if they attempt to do this an alert will appear once Create is selected informing the player they are required to enter a valid username.
 
   ![screenshot of Username Section](media/create_username.png)
@@ -82,9 +82,9 @@ This game is targeted at Harry Potter fans of all ages.
       - A question for the player.
       - 4 answer choices in the form of buttons. These are either stacked vertically on smaller screens or horizontally on larger screens.
       - A home button for the player to return to the Main Contents.
-      - A score board labelled with 'Correct' and 'Incorrect'. The value of the relative label will increase after each question depending on if the user selects the correct or incorrect answer. If the player replays the game the score for both 'Correct' and 'Incorrect' will reset to 0.
-    - All font within the Quiz Area is black on white background which is clear for the user.
-    - If the player exists the game and selects 'Begin Quiz' again the game resets back to the start and the user starts the game again.
+      - A score board labelled with 'Correct' and 'Incorrect'. The value of the relative label will increase after each question depending on if the player selects the correct or incorrect answer. If the player replays the game the score for both 'Correct' and 'Incorrect' will reset to 0.
+    - All font within the Quiz Area is black on white background which is clear for the player.
+    - If the player exists the game and selects 'Begin Quiz' again the game resets back to the start and the player starts the game again.
 
     ![screenshot of Quiz Area](media/quiz_area.png)
     ![screenshot of Quiz Area](media/quiz_area_smaller_page.png)
@@ -93,7 +93,7 @@ This game is targeted at Harry Potter fans of all ages.
 - __Footer__
 
   - The aim of this section is showcase the total score of each game once each game is complete.
-  - The background is black with white font to mimic the Header of the game and make the text clear for the user to read.
+  - The background is black with white font to mimic the Header of the game and make the text clear for the player to read.
   - If the player attempts a game again and receives a new score, the corresponding total score will be replaced with the new score.
 
   ![screenshot of Footer](media/footer.png)
@@ -103,11 +103,11 @@ This game is targeted at Harry Potter fans of all ages.
 
   - Further quiz games under the following categories;
     - Other Harry Potter characters.
-    - To sort the user into a Hogwarts House depending on the answers they choose.
-  - Further levels for each game so that the user can progress further.
-  - Create a timer feature to set a limit on how long the user has to complete the quiz.
-  - Animation on the home screen when the user firsts accesses the site.
-  - The user is informed of the correct answers when selecting an incorrect answer in the game.
+    - To sort the player into a Hogwarts House depending on the answers they choose.
+  - Further levels for each game so that the player can progress further.
+  - Create a timer feature to set a limit on how long the player has to complete the quiz.
+  - Animation on the home screen when the player firsts accesses the site.
+  - The player is informed of the correct answers when selecting an incorrect answer in the game.
   - Receive a final score which is a combination of all 3 total scores after completing all 3 games.
 
 
@@ -125,7 +125,7 @@ This game is targeted at Harry Potter fans of all ages.
     - Laptop > = 992px
     - Desktop > = 1200px
 
-  - I confirm that the Header and Footer are clearly defined to the user and easy to read. The rules of the game are clearly layed out and the function of the game is simple to navigate. 
+  - I confirm that the Header and Footer are clearly defined to the player and easy to read. The rules of the game are clearly layed out and the function of the game is simple to navigate. 
 
   - I have tested that the create username input works and that the input is required to be a valid string input of at least one index.
 
@@ -137,7 +137,7 @@ This game is targeted at Harry Potter fans of all ages.
   
   - I have tested that the correct alert message appears depending on the score the player achieves;
     - If the player achieves 0 correct scores the alert message offers condolences.
-    - If the player achieves some correct scores and some incorrect scores the alert message congratulates the user but suggests they play again and try and beat the score.
+    - If the player achieves some correct scores and some incorrect scores the alert message congratulates the player but suggests they play again and try and beat the score.
     - If the player achieves 10 out of 10 correct they are congratulated but not offered to beat their score as this is not possible.
   
   - I have tested that when replaying a game:

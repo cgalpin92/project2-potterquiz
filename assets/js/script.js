@@ -91,11 +91,11 @@ const ronQuestions = [{
     },
     {
         question: "What does Ginny say Ron has a tattoo of?",
-        choices: ["A chess piece Knight", "A Lion", "A Dragon", "A Pygmy Puff"],
+        choices: ["A Knight chess piece", "A Lion", "A Dragon", "A Pygmy Puff"],
         correct: "A Pygmy Puff"
     },
     {
-        question: "What is Ron's favourite Quidditch team?",
+        question: "Who is Ron's favourite Quidditch team?",
         choices: ["Chudley Cannons", "Holyhead Harpies", "Puddlemere United", "Tutshill Tornados"],
         correct: "Chudley Cannons"
     },
@@ -156,7 +156,7 @@ const hermioneQuestions = [{
         correct: "Draco's cruel bahaviour made her upset"
     },
     {
-        question: "Where did Hermione hold the first meeting for students interest in joining Dumbledore's Army?",
+        question: "Where did Hermione hold the first meeting for students interested in joining Dumbledore's Army?",
         choices: ["The Hog's Head", "The Leaky Cauldron", "The Shrieking Shack", "The Hogwarts Library"],
         correct: "The Hog's Head"
     },
