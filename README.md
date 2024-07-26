@@ -149,9 +149,11 @@
 
   - __HTML__
     - No errors were returned when passing HTML code from index.html through the official W3C validator.
+    ![screenshot of W3C validator No Errors Returned](media/html_w3c_validator.png)
 
   - __CSS__
     - No errors were returned when passing through the official (Jigsaw) validator.
+    ![screenshot of Jigsaw Validator No Errors Returned](media/css_jigsaw_validator.png)
 
 
   - __JavaScript__
@@ -160,6 +162,7 @@
     - The warnings have stated that the variables and syntaxes used are only available in ES6. I do not believe any action is required here as it not affecting the running of my code
     - The warnings have also stated unnecessary semicolons - these have been at the end of functions.
     - I have decided to leave them in because it does not affect the running of my code.
+    ![screenshot of jshint validator warnings](media/jshint.png)
 
 
   - __Accessibility__
