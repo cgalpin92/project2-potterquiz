@@ -126,11 +126,13 @@
 
   - I confirm that the Header and Footer are clearly defined to the user and easy to read. The rules of the game are clearly layed out and the function of the game is simple to navigate. 
 
-  - I have tested that the create username input works and that the input is required to be a valid string input.
+  - I have tested that the create username input works and that the input is required to be a valid string input of at least one index.
 
   - I have tested that the player is required to create a username before they can proceed with playing the game.
 
-  - I have tested each quiz to ensure that all questions appear correctly, that the checkAnswer function works and identifies the correct answer for the choice selected by the player. I have checked that when either the correct or incorrect selection is identified, the relevant score increments correctly. 
+  - I have tested each quiz to ensure that all questions appear correctly, that the checkAnswer function works and identifies the correct answer for the choice selected by the player. I have checked that when either the correct or incorrect selection is identified, the relevant score increments correctly.
+
+  - I have run each game whilst checking to the console to ensure no errors appear and that all console.logs have been removed from the code. 
   
   - I have tested that the correct alert message appears depending on the score the player achieves;
     - If the player achieves 0 correct scores the alert message offers condolences.
@@ -141,7 +143,6 @@
     - The total score within the footer resets back to 0.
     - The values for correct and incorrect within the scoreboard reset back to 0.
     - The questions and corresponding choices reset back to question one.
-  
 
 
 ### Validator Testing 
@@ -154,6 +155,11 @@
 
 
   - __JavaScript__
+    - Have run the javascript code through jshint.
+    - Warnings have appeared but no errors.
+    - The warnings have stated that the variables and syntaxes used are only available in ES6. I do not believe any action is required here as it not affecting the running of my code
+    - The warnings have also stated unnecessary semicolons - these have been at the end of functions.
+    - I have decided to leave them in because it does not affect the running of my code.
 
 
   - __Accessibility__
