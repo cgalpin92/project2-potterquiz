@@ -165,6 +165,7 @@ label {
         margin-top: 4%;
     }
 
+    /* guiance taken from geeksforgeeks https://www.geeksforgeeks.org/fluid-width-with-equally-spaced-div-using-css/ */
     #main-content {
         display: flex;
         justify-content: space-between;

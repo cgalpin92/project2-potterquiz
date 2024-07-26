@@ -1,5 +1,8 @@
 //Global Variables
 
+/**
+ * Questions sources from BuzzFeed
+ */
 const harryQuestions = [{
         question: "What house does Harry belong to?",
         choices: ["Gryffindor", "Hufflepuff", "Ravenclaw", "Slytherin"],
@@ -53,6 +56,9 @@ const harryQuestions = [{
 
 ];
 
+/**
+ * Questions sources from BuzzFeed
+ */
 const ronQuestions = [{
         question: "What is the name of the Weasley family home?",
         choices: ["Number 12 Grimmauld Place", "Little Whinging", "The Burrow", "Godric's Hollow"],
@@ -106,6 +112,9 @@ const ronQuestions = [{
 
 ];
 
+/**
+ * Questions sources from BuzzFeed
+ */
 const hermioneQuestions = [{
         question: "What is Hermione's first line in the first movie?",
         choices: ["Has anyone seen a toad?", "Oh, are you doing magic?", "You've got dirt on your nose, by the way", "I'm Hermione Granger"],
@@ -197,6 +206,9 @@ let incorrectAnswers = document.createElement('p');
  * checks that the input is valid in that it must have at least one index value, so the user cannot just enter a space
  * once the create button is selected the value from the input is set as a h2 element
  * the text input field and create button are then hidden and replaced with the h2 element
+ * 
+ * Some of the code has been taken from SheCodes - https://www.shecodes.io/athena/5824-how-to-change-h1-to-the-user-name-submitted-in-search-engine and 
+ * w3schools - https://www.w3schools.com/js/js_validation.asp
  */
 function createUsername(selected) {
     let valueCheck = document.getElementById('username').value;
@@ -220,6 +232,8 @@ function createUsername(selected) {
 
 /**
  * function which takes the id's from the main content section and set their display property to hide
+ * 
+ * guidance for code taken from w3schools - https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
  */
 function hideMainContent() {
     const welcome = document.getElementById('welcome');
@@ -235,6 +249,8 @@ function hideMainContent() {
 
 /**
  * function which takes the id's from the main content section and set their display property to block
+ * 
+ * guidance for code taken from w3schools - https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
  */
 function displayMainContent() {
     const welcome = document.getElementById('welcome');
@@ -304,6 +320,8 @@ function addIncorrectScore() {
 
 /**
  * This function sets the display of the quiz area to none to hide it when called
+ * 
+ * guidance for code taken from w3schools - https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
  */
 function hideQuizArea() {
     quizArea.style.display = 'none';
@@ -311,6 +329,8 @@ function hideQuizArea() {
 
 /**
  * This function sets the display of the quiz area to block to display it when called
+ * 
+ * guidance for code taken from w3schools - https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp
  */
 function displayQuizArea() {
     quizArea.style.display = 'block';
@@ -353,14 +373,18 @@ function removeQuestionHeading() {
 
 /**
  * This function displays the question and relevant choices for harryQuestions
+ * 
+ * some code and guidance taken from Microsoft Bing search AI generator, Stack Overflow, envato tuts+ and sitepoint
  */
 function displayHarryQuestion() {
     //places the question and choices in the correct locations within quiz area and assigns them a variable
     let questionElement = document.getElementById("question");
     let choicesElement = document.getElementById("answer-choices");
+
     //fetches the current question from harryQuestion variable and places it in a variable
     let displayQuestion = harryQuestions[currentQuestion];
     questionElement.textContent = displayQuestion.question;
+
     //creates the button choices for the question displayed above
     choicesElement.innerHTML = "";
     displayQuestion.choices.forEach((choice, index) => {
@@ -371,6 +395,7 @@ function displayHarryQuestion() {
         input.addEventListener('click', () => checkHarryAnswer(choice));
         choicesElement.appendChild(input);
     });
+
     //calls the scoreCard function and adds the home button to the bottom of the section
     scoreCard();
     btnOne.setAttribute('onclick', 'home();');
@@ -464,15 +489,19 @@ function runGameTwo() {
 
 /**
  * This function displays the question and relevant choices for ronQuestions
+ * 
+ * some code and guidance taken from Microsoft Bing search AI generator, Stack Overflow, envato tuts+ and sitepoint
  */
 
 function displayRonQuestion() {
     //places the question and choices in the correct locations within quiz area and assigns them a variable
     let questionElement = document.getElementById("question");
     let choicesElement = document.getElementById("answer-choices");
+
     //fetches the current question from ronQuestion variable and places it in a variable
     let displayQuestion = ronQuestions[currentQuestion];
     questionElement.textContent = displayQuestion.question;
+
     //creates the button choices for the question displayed above
     choicesElement.innerHTML = "";
     displayQuestion.choices.forEach((choice, index) => {
@@ -483,6 +512,7 @@ function displayRonQuestion() {
         input.addEventListener('click', () => checkRonAnswer(choice));
         choicesElement.appendChild(input);
     });
+
     //calls the scoreCard function and adds the home button to the bottom of the section
     scoreCard();
     btnOne.setAttribute('onclick', 'home();');
@@ -563,7 +593,6 @@ function runRonGame() {
  * However once the h3 element is created and the total score for Hermione is reset back to 0
  * It will run the displayHermioneQuestions
  */
-
 function runGameThree() {
     let questionDiv = document.getElementById('question-div');
     let questionHeading = document.createElement('h3');
@@ -575,14 +604,18 @@ function runGameThree() {
 
 /**
  * This function displays the question and relevant choices for hermioneQuestions
+ * 
+ * some code and guidance taken from Microsoft Bing search AI generator, Stack Overflow, envato tuts+ and sitepoint
  */
 function displayHermioneQuestion() {
     //places the question and choices in the correct locations within quiz area and assigns them a variable
     let questionElement = document.getElementById("question");
     let choicesElement = document.getElementById("answer-choices");
+
     //fetches the current question from hermioneQuestion variable and places it in a variable
     let displayQuestion = hermioneQuestions[currentQuestion];
     questionElement.textContent = displayQuestion.question;
+
     //creates the button choices for the question displayed above
     choicesElement.innerHTML = "";
     displayQuestion.choices.forEach((choice, index) => {
@@ -593,6 +626,7 @@ function displayHermioneQuestion() {
         input.addEventListener('click', () => checkHermioneAnswer(choice));
         choicesElement.appendChild(input);
     });
+
     //calls the scoreCard function and adds the home button to the bottom of the section
     scoreCard();
     btnOne.setAttribute('onclick', 'home();');
