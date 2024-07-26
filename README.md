@@ -1,8 +1,10 @@
 # Potter Quiz
 
 ## Intro
-The Potter Quiz game is for Harry Potter fans to test their knowledge on the three main characters; Harry Potter, Ron Weasley, Hermione Granger.
-The website consists of three games for each of the characters. The player can replay these games to try and beat their scores as many times as they wish.
+The Potter Quiz game is for Harry Potter fans to test their knowledge on the three main characters: Harry Potter, Ron Weasley and Hermione Granger.
+The website consists of three games for each of the characters. When selecting Begin Quiz for each character, the player will be presented with a question and multiple-choice answers. When the player selects an answer, they will be informed if they are correct or incorrect. They will be able to keep a tally of their scores across each game which will be visible to the player at the footer of the page. The player can replay these games to try and beat their scores as many times as they wish.
+
+This game is targeted at Harry Potter fans of all ages.
 
   ![Responsice Mockup](media/potter-quiz-mockup.png) 
 
@@ -246,7 +248,7 @@ The live link can be found here - https://cgalpin92.github.io/project2-potterqui
   - Code sourced or guidance taken from SheCodes:
     - Targetting a button selection - https://www.shecodes.io/athena/7288-how-to-target-only-one-button-while-writing-in-javascript#:~:text=In%20JavaScript%2C%20you%20can%20use,through%20the%20addEventListener()%20method.&text=This%20attaches%20the%20function%20to,in%20the%20myFunction()%20body.
     - For replacing the form with the entered username - https://www.shecodes.io/athena/5824-how-to-change-h1-to-the-user-name-submitted-in-search-engine
-    - Placing functions within functions - https://www.shecodes.io/athena/1697-can-i-place-a-function-in-another-function-in-javascript#:~:text=Yes%2C%20a%20function%20can%20be,function%20and%20example%20code%20provided.
+    - Placing functions within functions - https://www.shecodes.io/athena/1697-can-i-place-a-function-in-another-function-in-javascript#:~:text=Yes%2C%20a%20function%20can%20be,function%20and%20example%20code%20provided
 
   - Code sourced or guidance taken from w3 schools
     - For hiding and displaying the main content and quiz area - https://www.w3schools.com/howto/howto_js_toggle_hide_show.asp 
